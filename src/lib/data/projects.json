@@ -1,0 +1,38 @@
+[
+  {
+    "image": "soundtap_icon",
+    "mask": "flower_shape",
+    "color": "#A9A7FF",
+    "onContainer": "#0A1F6A",
+    "title": "SoundTap",
+    "body": "soundtap_description",
+    "href": "/works/soundtap"
+  },
+  {
+    "image": "aich_icon",
+    "mask": "Circle",
+    "color": "#8EC8F5",
+    "onContainer": "#051624",
+    "title": "AiCh",
+    "body": "aich_description",
+    "href": "/works/aich"
+  },
+  {
+    "image": "obsidian_icon",
+    "mask": "Pill",
+    "color": "#E1AAF2",
+    "onContainer": "#12062B",
+    "title": "Obsidian",
+    "body": "obsidian_description",
+    "href": "/works/obsidian"
+  },
+  {
+    "image": "dynamic_island_icon",
+    "mask": "Square",
+    "color": "#F5C58E",
+    "onContainer": "#2D3207",
+    "title": "Dynamic Island",
+    "body": "dynamic_island_description",
+    "href": "/works/dynamic-island"
+  }
+]
