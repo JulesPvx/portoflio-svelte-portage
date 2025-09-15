@@ -1,8 +1,8 @@
 <script lang="ts">
-
     import {adjustHSL, hexToHSL} from "$lib/utils/colors";
     import Star3 from "$lib/components/icons/Star3.svelte";
     import SocialCard from "$lib/components/SocialCard.svelte";
+    import {m} from "$paraglide/messages"
 
     const {
         color = $bindable("#3F6836"),
@@ -64,14 +64,14 @@
                         href="https://www.instagram.com/jules.pvx/"
                         icon="green-instagram"
                         onContainer="#0B1B05"
-                        title="Personal"
+                        title={m.personal()}
                 />
                 <SocialCard
                         color="#E9A1D1"
                         href="https://www.instagram.com/paeelluu/"
                         icon="pink-instagram"
                         onContainer="#441534"
-                        title="Photography"
+                        title={m.photography()}
                 />
                 <SocialCard
                         color="#8BA1E4"
@@ -85,10 +85,10 @@
                 <div class="flex flex-row w-full items-center justify-center">
                     <Star3 class="w-[56px] h-[56px] hidden lg:block"/>
                     <div class="flex flex-col lg:ms-8 lg:items-start items-center">
-                        <h2 class="text-center text-4xl lg:text-6xl lg:text-left">Let's work together :)</h2>
-                        <p class="w-[80%] mt-4 text-center lg:text-left">Contact me for any project, from development to
-                            design—I’m here to help
-                            bring your vision to life.</p>
+                        <h2 class="text-center text-4xl lg:text-6xl lg:text-left">{m.lets_work_together()} :)</h2>
+                        <p class="w-[80%] mt-4 text-center lg:text-left">
+                            {m.lets_work_together_description()}
+                        </p>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <h4>MAIL</h4>
+                            <h4>{m.email_me()}</h4>
                             <span class="mt-2">julespouvreaux@gmail.com</span>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <h4>MESSAGE ME</h4>
+                            <h4>{m.message_me()}</h4>
                             <span class="mt-2">+33 6 59 506 522</span>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
 
                 <span id="bottom-title">JULES</span>
                 <span class="absolute bottom-0 me-6 mb-4 right-0"
-                      id="copyright">©2024 Jules Pouvreaux.<br/>All rights reserved</span>
+                      id="copyright">©{new Date().getFullYear()} Jules Pouvreaux.<br/>{m.all_rights_reserved()}</span>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@
   "get_in_touch": "Contactez-moi",
   "about": "À propos",
   "contact": "Contact",
+  "personal": "Perso",
   "learn_more_about_me": "En savoir plus sur moi",
   "my_principles": "Mes principes",
   "design_for_humans": "Concevoir pour les humains",
@@ -103,5 +104,9 @@
   "soundtap_design_p2": "L'application est entièrement personnalisable, vous pouvez donc choisir les actions déclenchées par les boutons de volume et ajuster la sensibilité des boutons de volume en fonction de vos préférences.",
   "soundtap_heading_development": "Le développement",
   "soundtap_development_p1": "Soundtap est développé avec Jetpack Compose, une interface utilisateur moderne pour la création d'applications Android natives. L'application est conçue pour être rapide et efficace, avec une faible empreinte mémoire et une consommation de batterie minimale.",
-  "soundtap_development_p2": "L'application est actuellement disponible sur le Google Play Store et son téléchargement et son utilisation sont gratuits. Si vous en avez assez de déverrouiller votre téléphone juste pour contrôler votre musique, essayez Soundtap et voyez à quel point elle peut vous simplifier la vie."
+  "soundtap_development_p2": "L'application est actuellement disponible sur le Google Play Store et son téléchargement et son utilisation sont gratuits. Si vous en avez assez de déverrouiller votre téléphone juste pour contrôler votre musique, essayez Soundtap et voyez à quel point elle peut vous simplifier la vie.",
+  "lets_work_together": "Travaillons ensemble",
+  "lets_work_together_description": "Contactez-moi pour tout projet, du développement à la conception. Je suis là pour vous aider à concrétiser votre vision.",
+  "message_me": "Envoyez-moi un message",
+  "email_me": "Envoyez-moi un e-mail"
 }
