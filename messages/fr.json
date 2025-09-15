@@ -1,6 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "get_in_touch": "Contactez-moi",
+  "about": "À propos",
+  "contact": "Contact",
   "learn_more_about_me": "En savoir plus sur moi",
   "my_principles": "Mes principes",
   "design_for_humans": "Concevoir pour les humains",

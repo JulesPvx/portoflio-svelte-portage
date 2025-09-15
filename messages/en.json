@@ -1,6 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "and": "and",
+  "about": "About",
+  "contact": "Contact",
   "building": "building",
   "my_dream": "my dream",
   "your_projects": "your projects",

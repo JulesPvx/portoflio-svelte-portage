@@ -1,6 +1,7 @@
 <script lang="ts">
     import {adjustHSL, hexToHSL} from "$lib/utils/colors";
     import {localizeHref} from "$paraglide/runtime";
+    import {m} from "$paraglide/messages"
 
     const {
         color = $bindable("#3F6836"),
@@ -73,11 +74,17 @@
         </div>
         <nav class="flex-grow">
             <ul class="flex-grow-0 flex flex-row items-center justify-center space-x-4">
-                <li><a href={localizeHref("/#works")}>MY WORKS</a></li>
-                <li><a href={localizeHref("/about")}>ABOUT</a></li>
+                <li><a href={localizeHref("/#works")}>
+                    {m.my_work().toUpperCase()}
+                </a></li>
+                <li><a href={localizeHref("/about")}>
+                    {m.about().toUpperCase()}
+                </a></li>
             </ul>
         </nav>
-        <a class="me-4" href="#contact" id="contact-btn">CONTACT</a>
+        <a class="me-4" href="#contact" id="contact-btn">
+            {m.contact().toUpperCase()}
+        </a>
     </div>
 </header>
 
