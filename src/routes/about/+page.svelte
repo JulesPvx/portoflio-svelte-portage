@@ -321,29 +321,10 @@
         }
     }
 
-    .bounce {
-        animation: bounce 0.2s;
-    }
-
     span {
         font-size: 1.3vw;
         font-weight: 300;
         line-height: 125%;
-    }
-
-    span > a {
-        position: relative;
-        color: #3F6836;
-        text-decoration: underline;
-        font-size: 1.3vw;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 125%;
-        transition: all 0.3s cubic-bezier(0.175, 1, 0.175, 2);
-    }
-
-    span > a:hover {
-        font-weight: 500;
     }
 
     .year {
