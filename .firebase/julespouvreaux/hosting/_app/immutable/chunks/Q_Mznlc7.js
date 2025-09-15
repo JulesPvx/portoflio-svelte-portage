@@ -1,4 +1,0 @@
-import{ai as _,Q as d,u as i,G as h,aj as c,ak as m,g,ae as v,al as b,am as w}from"./DzYBUb8Z.js";function k(s=!1){const t=_,e=t.l.u;if(!e)return;let r=()=>v(t.s);if(s){let o=0,n={};const p=b(()=>{let f=!1;const l=t.s;for(const a in l)l[a]!==n[a]&&(n[a]=l[a],f=!0);return f&&o++,o});r=()=>g(p)}e.b.length&&d(()=>{u(t,r),c(e.b)}),i(()=>{const o=h(()=>e.m.map(m));return()=>{for(const n of o)typeof n=="function"&&n()}}),e.a.length&&i(()=>{u(t,r),c(e.a)})}function u(s,t){if(s.l.s)for(const e of s.l.s)g(e);t()}w();const x=`<svg width="281" height="281" viewBox="0 0 281 281" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.078125" width="280" height="280" rx="140" fill="#000000"/>
-</svg>
-`,j=Object.freeze(Object.defineProperty({__proto__:null,default:x},Symbol.toStringTag,{value:"Module"}));export{j as C,k as i};
