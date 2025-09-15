@@ -36,6 +36,8 @@
         <span class="paragraph mt-4">
             {m.who_am_i_intro_2()}
 
+            <br/>
+
             <LinkText disabled text={m.tools_and_frameworks()}>
                 <img alt="my tools and frameworks" class="w-full h-full object-cover" loading='eager'
                      src="/images/frameworks_cover.webp"/>
@@ -69,13 +71,20 @@
         </div>
     </div>
     <div class="w-1/2 py-56 me-32 justify-center lg:flex hidden flex-col items-end relative overflow-visible">
-        <img alt="alt" class="img object-cover h-[418px] w-[278px] translate-x-[0vw] rotate-[8deg] translate-y-[15vh]"
-             src="/images/270d8f7117b3f8e26e5e958c696ca9c3.webp"/>
-        <img alt="alt" class="img object-cover h-[418px] w-[278px] -translate-x-[5vw] rotate-[2deg] translate-y-[-18vh]"
-             src="/images/7884342bb12d04e70f4a54e4abaf44b6.webp"/>
+        <div class="img h-[418px] w-[278px] translate-x-[0vw] rotate-[8deg] translate-y-[15vh] overflow-hidden">
+            <enhanced:img alt="alt"
+                          class="object-cover size-full"
+                          src="/src/lib/assets/images/270d8f7117b3f8e26e5e958c696ca9c3.webp"/>
+        </div>
+        <div class="img h-[418px] w-[278px] -translate-x-[5vw] rotate-[2deg] translate-y-[-18vh] overflow-hidden">
+            <enhanced:img alt="alt" class="object-cover size-full"
+                          src="/src/lib/assets/images/7884342bb12d04e70f4a54e4abaf44b6.webp"/>
+        </div>
         <div class="-translate-x-[15vw] rotate-[-8deg] h-[418px] w-[278px] flex items-center justify-center">
-            <img alt="alt" class="img object-cover w-full h-full" loading='eager'
-                 src="/images/img.webp"/>
+            <div class="img size-full overflow-hidden">
+                <enhanced:img alt="alt" class="object-cover size-full" loading='eager'
+                              src="/src/lib/assets/images/img.webp"/>
+            </div>
             <SecondaryButton class="absolute bottom-0 translate-y-1/2" href="">
                 {m.see_more()}
             </SecondaryButton>
@@ -102,6 +111,7 @@
         border-radius: 48px;
         border: 10px solid #697C61;
         transition: all 0.3s cubic-bezier(0.175, 1, 0.175, 2);
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
 </style>

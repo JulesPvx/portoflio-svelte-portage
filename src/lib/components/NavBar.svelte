@@ -77,7 +77,7 @@
                 <li><a href={localizeHref("/about")}>ABOUT</a></li>
             </ul>
         </nav>
-        <a class="me-4" href="#contact" id="contact">CONTACT</a>
+        <a class="me-4" href="#contact" id="contact-btn">CONTACT</a>
     </div>
 </header>
 
@@ -115,7 +115,7 @@
         padding: 12px 32px;
     }
 
-    #contact {
+    #contact-btn {
         display: flex;
         padding: 12px 24px;
         flex-direction: column;
@@ -132,7 +132,7 @@
         transition: scale 0.3s cubic-bezier(0.175, 1, 0.175, 2), background 0.2s, color 0.2s;
     }
 
-    #contact:hover {
+    #contact-btn:hover {
         background: var(--lightHSLString);
         color: var(--darkHSLString);
         scale: 1.1;
