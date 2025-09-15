@@ -11,6 +11,15 @@ export default defineConfig({
             project: './project.inlang',
             outdir: './src/paraglide',
             strategy: ["url", "baseLocale"],
+            urlPatterns: [
+                {
+                    pattern: "/:path(.*)?",
+                    localized: [
+                        ["fr", "/fr/:path(.*)?"],
+                        ["en", "/en/:path(.*)?"],
+                    ],
+                },
+            ],
         }),
         tailwindcss(),
         sveltekit()

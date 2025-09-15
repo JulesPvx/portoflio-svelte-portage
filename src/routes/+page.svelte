@@ -171,41 +171,6 @@
         }
     }
 
-    span > a {
-        position: relative;
-        color: #3F6836;
-        text-decoration: underline;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 115%; /* 27.6px */
-        font-family: Gluten, sans-serif;
-        transition: all 0.3s cubic-bezier(0.175, 1, 0.175, 2);
-    }
-
-    span > a:hover {
-        font-weight: bold;
-    }
-
-    .my-works {
-        color: #000;
-        text-align: center;
-        font-family: Gluten, sans-serif;
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-    }
-
-    .my-works-description {
-        color: #000;
-        text-align: justify;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
     .grided {
         background-size: 150px 150px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.10) 1px, transparent 1px),

@@ -60,7 +60,6 @@
 </div>
 
 <style>
-
     #container {
         background: rgba(0, 0, 0, 0.10);
         padding: 32px;
@@ -85,10 +84,6 @@
     }
 
     #container a:hover {
-        font-weight: 900;
-    }
-
-    #container a.active {
         font-weight: 900;
     }
 </style>
