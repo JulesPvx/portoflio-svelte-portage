@@ -140,8 +140,9 @@
         </svg>
 
         <!-- TITLE - ABOUT ME -->
-        <section class="pointer-events-none absolute -translate-x-[5vw] -translate-y-[12vw] h-[60vw] w-full"
-                 id="about-me"/>
+        <span aria-hidden="true"
+              class="pointer-events-none absolute -translate-x-[5vw] -translate-y-[12vw] h-[60vw] w-full"
+              id="about-me"></span>
         <div class=" absolute right-0 -translate-x-[5vw] -translate-y-[2.7vw] rotate-[3.8deg] flex flex-row gap-4 items-end">
             <svg class="svg" fill="none" viewBox="0 0 173 44" xmlns="http://www.w3.org/2000/svg">
                 <path d="M169.128 16.9769C170.772 17.1824 172.271 16.0162 172.477 14.3722C172.682 12.7281 171.516 11.2288 169.872 11.0232L169.128 16.9769ZM1.01808 23.8147C0.0873415 25.1855 0.444021 27.0512 1.81475 27.9819L24.152 43.1492C25.5227 44.0799 27.3884 43.7233 28.3192 42.3525C29.2499 40.9818 28.8932 39.1161 27.5225 38.1854L7.66717 24.7033L21.1492 4.84798C22.0799 3.47726 21.7233 1.61155 20.3525 0.680813C18.9818 -0.249928 17.1161 0.106751 16.1854 1.47748L1.01808 23.8147ZM169.5 14.0001C169.872 11.0232 169.871 11.0231 169.87 11.023C169.869 11.0229 169.868 11.0227 169.866 11.0225C169.863 11.0222 169.859 11.0217 169.855 11.0211C169.845 11.0199 169.831 11.0182 169.814 11.0161C169.779 11.0119 169.728 11.0058 169.662 10.9981C169.53 10.9826 169.336 10.9605 169.082 10.9327C168.572 10.8771 167.819 10.7991 166.828 10.7072C164.846 10.5235 161.913 10.2846 158.082 10.0599C150.419 9.6105 139.157 9.21796 124.704 9.43788C95.7989 9.87773 54.1244 12.7675 2.93667 22.5534L4.06333 28.4466C54.8756 18.7325 96.2011 15.8723 124.796 15.4372C139.093 15.2196 150.206 15.6084 157.731 16.0496C161.493 16.2702 164.357 16.504 166.274 16.6816C167.232 16.7704 167.953 16.8452 168.431 16.8973C168.67 16.9234 168.848 16.9437 168.964 16.9574C169.023 16.9642 169.065 16.9693 169.093 16.9726C169.106 16.9743 169.116 16.9755 169.122 16.9762C169.125 16.9765 169.127 16.9768 169.128 16.9769C169.128 16.977 169.128 16.977 169.129 16.977C169.128 16.977 169.128 16.9769 169.5 14.0001Z"
@@ -180,8 +181,9 @@
         </div>
 
         <!-- TITLE - NOW -->
-        <section class="pointer-events-none absolute translate-x-[-29vw] translate-y-[38vw] w-full h-[70vw]"
-                 id="now"/>
+        <span aria-hidden="true"
+              class="pointer-events-none absolute translate-x-[-29vw] translate-y-[38vw] w-full h-[70vw]"
+              id="now"></span>
         <div class=" absolute right-0 translate-x-[-29vw] translate-y-[50vw] rotate-[32.3deg] flex flex-row gap-12 items-center">
             <h1>NOW</h1>
             <svg class="svg rotate-[-40deg]" fill="none"
@@ -227,8 +229,9 @@
         </div>
 
         <!-- TITLE - TIMELINE -->
-        <section class="pointer-events-none absolute translate-x-[-19vw] translate-y-[116vw] w-full h-[90vw]"
-                 id="timeline"/>
+        <span aria-hidden="true"
+              class="pointer-events-none absolute translate-x-[-19vw] translate-y-[116vw] w-full h-[90vw]"
+              id="timeline"></span>
         <div class=" absolute right-0 translate-x-[-19vw] translate-y-[116vw] rotate-[-32.3deg] flex flex-row gap-2 items-center">
             <svg class="svg rotate-[40deg]"
                  fill="none" height="100" viewBox="0 0 86 100" width="86" xmlns="http://www.w3.org/2000/svg">

@@ -222,5 +222,9 @@
             line-height: 2.25rem;
         }
     }
+
+    #contact {
+        scroll-margin-top: 196px;
+    }
 </style>
 
