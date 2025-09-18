@@ -1,10 +1,22 @@
-<script>
+<script lang="ts">
     import LinkText from "$lib/components/LinkText.svelte";
     import PrimaryButton from "$lib/components/PrimaryButton.svelte";
     import SecondaryButton from "$lib/components/SecondaryButton.svelte";
     import TonalButton from "$lib/components/TonalButton.svelte";
     import {localizeHref} from "$paraglide/runtime.js";
     import * as m from "$paraglide/messages";
+
+    const birthdate = new Date('2006-09-16')
+
+    function getAge(date: Date): number {
+        const today = new Date();
+        let age = today.getFullYear() - date.getFullYear();
+        const m = today.getMonth() - date.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < date.getDate())) {
+            age--;
+        }
+        return age;
+    }
 </script>
 
 <div class="w-full bg-[#B7DEA4] flex flex-row">
@@ -14,7 +26,9 @@
         </h4>
 
         <span class="paragraph mt-12">
-            {@html m.who_am_i_intro_1()}
+            {@html m.who_am_i_intro_1({
+                year: getAge(birthdate)
+            })}
 
             <LinkText href="https://www.instagram.com/paeelluu/" text={m.photography()}>
                 <img alt="my photos" class="w-full h-full object-cover" loading='eager'

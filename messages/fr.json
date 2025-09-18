@@ -26,7 +26,7 @@
   "photography": "Photographie",
   "tools_and_frameworks": "outils et cadres",
   "music": "Musique",
-  "who_am_i_intro_1": "Je suis un\n<span class=\"font-notoColorEmoji\">🇫🇷</span>\nétudiant français fraîchement âgé de 18 ans à Angoulême qui aime coder,\n<span class=\"font-notoColorEmoji\">🧑‍💻</span>",
+  "who_am_i_intro_1": "Je suis un\n<span class=\"font-notoColorEmoji\">🇫🇷</span>\nétudiant français fraîchement âgé de {year} ans à Angoulême qui aime coder,\n<span class=\"font-notoColorEmoji\">🧑‍💻</span>",
   "who_am_i_intro_2": "Malgré mon jeune âge, je suis déjà à l'aise avec de nombreuses",
   "who_am_i_intro_3": "Avec quelques projets populaires sur",
   "who_am_i_intro_4": "et l'expérience de",
