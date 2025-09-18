@@ -29,16 +29,16 @@
 </script>
 
 <header
-        class={["w-full flex justify-center mt-8 fixed z-50 pointer-events-none px-4", klass]}
+        class={["w-full flex justify-center md:mt-8 fixed z-50 pointer-events-none md:px-4", klass]}
         style:--darkHSLString={darkHSLString}
         style:--extraLightHSLString={extraLightHSLString}
         style:--lightHSLString={lightHSLString}
         style:--navBarColorString={navBarColorString}
         style:--saturatedHSLString={saturatedHSLString}
 >
-    <div class="container flex flex-row lg:w-[50%] w-full rounded-full overflow-hidden pointer-events-auto">
+    <div class="nav-container items-center md:gap-6 gap-2 flex flex-row lg:w-[75%] xl:w-[50%] w-full md:rounded-full overflow-hidden pointer-events-auto">
         <div class="logo">
-            <a href={localizeHref("/")}>
+            <a class="size-12 md:size-fit md:p-0 m-1" href={localizeHref("/")}>
                 <svg fill="none" height="47" viewBox="0 0 39 47" width="39" xmlns="http://www.w3.org/2000/svg">
                     <title>Jules' Logo</title>
                     <rect fill="black" height="26.6479" transform="rotate(6 20.832 9.15419)" width="10.7747" x="20.832"
@@ -73,7 +73,7 @@
             </a>
         </div>
         <nav class="flex-grow">
-            <ul class="flex-grow-0 flex flex-row items-center justify-center space-x-4">
+            <ul class="flex-grow-0 flex flex-row items-center justify-center md:gap-4">
                 <li><a href={localizeHref("/#works")}>
                     {m.my_work().toUpperCase()}
                 </a></li>
@@ -89,13 +89,7 @@
 </header>
 
 <style>
-    .container {
-        display: flex;
-        padding: 4px 4px;
-        align-items: center;
-        gap: 24px;
-        flex-shrink: 0;
-        border-radius: 1000px;
+    .nav-container {
         backdrop-filter: blur(30px);
         background-color: var(--navBarColorString);
     }
@@ -115,11 +109,20 @@
         font-weight: 800;
         line-height: normal;
         transition: background 0.2s, padding 0.3s cubic-bezier(0.175, 1, 0.175, 2);
-    }
 
-    a:hover {
-        background: rgba(255, 255, 255, 0.5);
-        padding: 12px 32px;
+        @media (max-width: 768px) {
+            padding: 12px 16px;
+            font-size: 12px;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 12px 32px;
+
+            @media (max-width: 768px) {
+                padding: 12px 20px;
+            }
+        }
     }
 
     #contact-btn {
@@ -137,6 +140,11 @@
         font-weight: 800;
         line-height: normal;
         transition: scale 0.3s cubic-bezier(0.175, 1, 0.175, 2), background 0.2s, color 0.2s;
+
+        @media (max-width: 768px) {
+            font-size: 12px !important;
+            padding: 10px 16px !important;
+        }
     }
 
     #contact-btn:hover {

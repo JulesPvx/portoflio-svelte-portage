@@ -28,6 +28,7 @@
         font-weight: normal;
         line-height: normal;
         transition: all 0.3s cubic-bezier(0.175, 1, 0.175, 2), background 0.2s ease;
+        text-align: center;
 
         &:hover {
             background: #182e18;

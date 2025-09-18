@@ -1,5 +1,7 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "got_a_project": "GOT A PROJECT?",
+  "let_s_bring_it_to_life": "Let's bring your ideas to life",
   "and": "and",
   "about": "About",
   "contact": "Contact",

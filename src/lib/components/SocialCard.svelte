@@ -18,18 +18,21 @@
 
 <a class="flex flex-row items-center lg:ps-4 lg:py-4 lg:pe-8 ps-2 py-2 pe-2 rounded-full md:pe-4"
    href={href}
+   style:--svg-color={onContainer}
    style:background-color={color}
    target="_blank">
 
-    <div class="icon-container lg:h-[56px] lg:w-[56px] h-[32px] w-[32px]">
+    <div class="icon-container lg:h-[56px] lg:w-[56px] h-[48px] w-[48px]">
         {#await iconHTML}
             <div class="loading-placeholder"></div>
         {:then module}
-            {@html module.default}
+            <div class="w-full h-full flex items-center justify-center p-1 lg:p-0">
+                {@html module.default}
+            </div>
         {/await}
     </div>
 
-    <h3 class="ms-4 lg:text-[1.25rem] hidden md:block text-[0.75rem]"
+    <h3 class="ms-4 lg:text-[1.25rem] hidden md:block text-[0.85rem]"
         style:color={onContainer}>
         {title}
     </h3>
@@ -64,6 +67,7 @@
     .icon-container :global(svg) {
         width: 100% !important;
         height: 100% !important;
+        color: var(--svg-color) !important;
         max-width: 100%;
         max-height: 100%;
         object-fit: contain; /* Maintain aspect ratio */

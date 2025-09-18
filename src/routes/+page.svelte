@@ -264,7 +264,7 @@
             <PrimaryButton class="mt-16 w-fit hidden sm:block" href={localizeHref("#contact")}>
                 {m.get_in_touch()}
             </PrimaryButton>
-            <TonalButton class="mt-16 w-fit" href={localizeHref("#contact")}>
+            <TonalButton class="mt-16 w-fit" href={localizeHref("/about")}>
                 {m.learn_more_about_me()}
             </TonalButton>
         </div>

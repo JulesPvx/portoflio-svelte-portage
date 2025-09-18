@@ -1,5 +1,4 @@
 <script lang="ts">
-    import {localizeHref} from "$paraglide/runtime";
 
     const {
         href = '#',
@@ -19,7 +18,7 @@
 </script>
 
 
-<a aria-disabled={disabled} class="relative" href={disabled ? undefined : localizeHref(href)} target={target}>
+<a aria-disabled={disabled} class="relative" href={disabled ? undefined : href} target={target}>
     <span class="trigger">{text}</span>
 
     <div class="pointer-events-none absolute-center-overlay inset-0 w-[250px] h-[150px]"
