@@ -13,7 +13,197 @@
     $effect(() => {
         resetPageColor()
     })
+
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jules Pouvreaux",
+        "email": "mailto:julespouvreaux@gmail.com",
+        "telephone": "+33659506522",
+        "description": "Full-Stack Developer specializing in modern web and mobile technologies",
+        "url": "https://julespvx.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Charente",
+            "addressCountry": "FR"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "IUT d'Angoulême"
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://julespvx.fr/images/jules_pouvreaux.webp",
+            "width": "1868",
+            "height": "1868"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/julespouvreaux/",
+            "https://www.instagram.com/paeelluu",
+            "https://github.com/JulesPvx"
+        ],
+        "jobTitle": "Full-Stack Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "skills": [
+            "JavaScript",
+            "TypeScript",
+            "Vue",
+            "Svelte",
+            "Node.js",
+            "AdonisJS",
+            "PostgreSQL",
+            "SQL",
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "UI/UX Design",
+            "Figma",
+            "GitHub"
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "Mobile Development",
+            "UI/UX Design",
+            "Responsive Design",
+            "Accessibility",
+            "Performance Optimization",
+            "Security Best Practices",
+            "Agile Methodologies",
+            "Project Management",
+            "Problem-Solving",
+            "Communication",
+            "Collaboration",
+            "Continuous Learning",
+            "Creativity",
+            "Critical Thinking"
+        ],
+    };
+
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Jules Pouvreaux Portfolio",
+        "url": "https://julespvx.fr",
+        "description": "Portfolio website showcasing full-stack development projects and services",
+        "author": {
+            "@type": "Person",
+            "name": "Jules Pouvreaux"
+        },
+        "potentialAction": [
+            {
+                "@type": "ContactAction",
+                "target": "https://julespvx.fr/#contact",
+                "name": "Get In Touch"
+            },
+            {
+                "@type": "ViewAction",
+                "target": "https://julespvx.fr/",
+                "name": "View Portfolio"
+            }
+        ]
+    };
+
+    const localBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Jules Pouvreaux - Full-Stack Developer",
+        "description": "Professional web development services",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://julespvx.fr/images/jules_pouvreaux.webp",
+            "width": "1868",
+            "height": "1868"
+        },
+        "url": "https://julespvx.fr",
+        "telephone": "+33659506522",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Charente",
+            "addressCountry": "France"
+        },
+        "provider": {
+            "@type": "Person",
+            "name": "Jules Pouvreaux"
+        },
+        "serviceType": ["Web Development", "Mobile App Development", "UI/UX Design"],
+        "serviceArea": {
+            "@type": "Place",
+            "name": "France"
+        }
+    };
+
+    const testimonialsSchema = {
+        "@context": "https://schema.org",
+
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Review",
+                "reviewBody": "Je suis très satisfaite du travail de Jules ! Il a fait preuve d’une grande proactivité et d’une excellente réactivité tout au long de la mission. Ce que j’ai particulièrement apprécié, c’est son attention portée aux besoins spécifiques des utilisateurs — dans mon cas, des enfants — ce qui n’est pas évident. Il a su s’adapter, proposer des solutions pertinentes, et livrer un travail de qualité. Je recommande vivement !",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Angélique F."
+                },
+                "itemReviewed": {
+                    "@type": "ProfessionalService",
+                    "name": "Jules Pouvreaux - Déploiement MVP mobile",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Jules Pouvreaux"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Charente",
+                        "addressCountry": "FR"
+                    },
+                },
+                "datePublished": "2025-04-15"
+            },
+            {
+                "@type": "Review",
+                "reviewBody": "Jules P truly outdid themselves in developing my mobile app - their professionalism and ability to exceed expectations were top-notch! 🙌 Working with them was a breeze too; they were incredibly responsive, delivered well before the deadline, and the cooperation level was simply outstanding. Highly recommend!",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Sergei Stiagailo - Senior Android Engineer"
+                },
+                "itemReviewed": {
+                    "@type": "ProfessionalService",
+                    "name": "Jules Pouvreaux - Développement composants mobiles",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Jules Pouvreaux"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Charente",
+                        "addressCountry": "FR"
+                    },
+                },
+                "datePublished": "2024-11-20"
+            }
+        ]
+    }
 </script>
+
+<svelte:head>
+    {@html `<script type="application/ld+json">${JSON.stringify(personSchema)}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(localBusinessSchema)}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(testimonialsSchema)}</script>`}
+</svelte:head>
 
 <section class="w-full flex flex-col items-center pt-56 mb-16 sm:mb-8 md:mb-0" id="TOP">
     <div class="flex flex-col">

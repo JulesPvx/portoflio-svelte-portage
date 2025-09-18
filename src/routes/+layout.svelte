@@ -22,6 +22,41 @@
 <svelte:head>
     <title>Jules' Portfolio</title>
     <link href={favicon} rel="icon"/>
+    <link href="https://julespvx.fr/fr/" hreflang="fr" rel="alternate"/>
+    <link href="https://julespvx.fr/en/" hreflang="en" rel="alternate"/>
+    <link href="https://julespvx.fr/" hreflang="x-default" rel="alternate"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Jules Pouvreaux" name="author"/>
+    <meta content="Jules Pouvreaux, Portfolio, Developer, Designer, Web Development, Mobile Development, Full-Stack, Projects, Skills"
+          name="keywords"/>
+    <meta content="Jules' Portfolio - Full-Stack Developer | Web & Mobile Expert" property="og:title"/>
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+          name="description"/>
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+          property="og:description"/>
+    <meta content="https://julespvx.fr/images/preview_1.webp" property="og:image"/>
+    <meta content="#3F6836" name="theme-color"/>
+
+    <!-- Canonical URL -->
+    <meta content="https://julespvx.fr/" property="og:url"/>
+    <link href="https://julespvx.fr{page.url.pathname}" rel="canonical"/>
+
+    <!-- Facebook Meta Tags -->
+    <meta content="https://julespvx.fr/" property="og:url">
+    <meta content="website" property="og:type">
+    <meta content="Jules' Portfolio" property="og:title">
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+          property="og:description">
+    <meta content="https://julespvx.fr/images/preview_1.webp" property="og:image">
+
+    <!-- Twitter Meta Tags -->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="julespvx.fr" property="twitter:domain">
+    <meta content="https://julespvx.fr/" property="twitter:url">
+    <meta content="Jules' Portfolio" name="twitter:title">
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+          name="twitter:description">
+    <meta content="https://julespvx.fr/images/preview_1.webp" name="twitter:image">
 </svelte:head>
 
 <div class="w-full min-h-screen flex flex-col justify-between items-center"
