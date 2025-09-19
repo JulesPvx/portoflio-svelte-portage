@@ -249,9 +249,9 @@
                 </h1>
 
                 <div class="flex flex-row items-center md:text-2xl text-xl">
-                    <h4 class="text-start font-gluten font-extralight">
+                    <span class="text-start font-gluten font-extralight">
                         {m.building()}
-                    </h4>
+                    </span>
                     <WordRotate
                             class="ms-2 text-start font-gluten font-light"
                             duration={3000}

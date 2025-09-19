@@ -23,20 +23,22 @@
                 {m.my_work_description()}
             </p>
         </div>
-        {#each projects.slice(0, midpoint) as project}
-            <ProjectCard
-                    image={project.image}
-                    mask={project.mask}
-                    color={project.color}
-                    onContainer={project.onContainer}
-                    title={project.title}
-                    body={getMessage(project.body)}
-                    href={localizeHref(project.href)}
-            />
-        {/each}
+        <ul class="flex-col gap-[24px] flex">
+            {#each projects.slice(0, midpoint) as project}
+                <ProjectCard
+                        image={project.image}
+                        mask={project.mask}
+                        color={project.color}
+                        onContainer={project.onContainer}
+                        title={project.title}
+                        body={getMessage(project.body)}
+                        href={localizeHref(project.href)}
+                />
+            {/each}
+        </ul>
     </div>
 
-    <div class="w-1/2 flex-col gap-[24px] hidden lg:flex">
+    <ul class="w-1/2 flex-col gap-[24px] hidden lg:flex">
         {#each projects.slice(midpoint) as project}
             <ProjectCard
                     image={project.image}
@@ -48,7 +50,7 @@
                     href={localizeHref(project.href)}
             />
         {/each}
-    </div>
+    </ul>
 
     <div class="flex-col gap-[24px] flex lg:hidden">
         <div class="w-full flex flex-col p-[24px] items-center">
@@ -59,17 +61,18 @@
                 {m.my_work_description()}
             </p>
         </div>
-        {#each projects as project}
-            <ProjectCard
-                    image={project.image}
-                    mask={project.mask}
-                    color={project.color}
-                    onContainer={project.onContainer}
-                    title={project.title}
-                    body={getMessage(project.body)}
-                    href={localizeHref(project.href)}
-            />
-        {/each}
+        <ul class="flex-col gap-[24px] flex">
+            {#each projects as project}
+                <ProjectCard
+                        image={project.image}
+                        mask={project.mask}
+                        color={project.color}
+                        onContainer={project.onContainer}
+                        title={project.title}
+                        body={getMessage(project.body)}
+                        href={localizeHref(project.href)}
+                />
+            {/each}
+        </ul>
     </div>
-
 </div>
