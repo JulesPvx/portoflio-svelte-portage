@@ -23,7 +23,7 @@
         align-items: center;
         align-self: stretch;
         border-radius: 73px;
-        background: #75A86A;
+        background: #528248;
         color: #FFF;
         font-family: Gluten, sans-serif;
         font-size: 16px;

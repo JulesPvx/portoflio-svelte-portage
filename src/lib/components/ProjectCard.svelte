@@ -1,4 +1,5 @@
 <script lang="ts">
+    import {m} from '$paraglide/messages'
 
     const {
         image,
@@ -40,9 +41,10 @@
         style:color={onContainer}>{title}</h2>
     <p class="mt-4 group-hover:font-light transition-all"
        style:color={onContainer}>{body}</p>
-    <a class="mt-8 transition-all font-medium group-hover:font-black " href={href}
-       id="button" style:background={onContainer}
-       style:color={color}>Learn More</a>
+    <a class="mt-8 transition-all font-medium group-hover:font-black "
+       href={href} id="button"
+       style:background={onContainer}
+       style:color={color}>{m.explore_further()}</a>
 </li>
 
 <style>

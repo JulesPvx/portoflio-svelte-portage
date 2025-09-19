@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 1000px;
-        background: #3F6836;
+        background: #26471d;
         color: #FFF;
         font-family: Gluten, sans-serif;
         font-size: 16px;

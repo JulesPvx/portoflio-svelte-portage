@@ -16,7 +16,8 @@
     const iconHTML = $state(import(`../assets/icons/${icon}.svg?raw`))
 </script>
 
-<a class="flex flex-row items-center lg:ps-4 lg:py-4 lg:pe-8 ps-2 py-2 pe-2 rounded-full md:pe-4"
+<a aria-label={title}
+   class="flex flex-row items-center lg:ps-4 lg:py-4 lg:pe-8 ps-2 py-2 pe-2 rounded-full md:pe-4"
    href={href}
    style:--svg-color={onContainer}
    style:background-color={color}
