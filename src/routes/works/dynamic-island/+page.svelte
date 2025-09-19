@@ -35,7 +35,11 @@
 </script>
 
 <svelte:head>
-    <title>Dynamic Island</title>
+    <title>Dynamic Island - iOS portage following Material You design</title>
+    <meta content="A modern showcase of Dynamic Island UI features: notifications, media control, battery, customization, and themes. Interactive, responsive design."
+          name="description"/>
+    <meta content="A modern showcase of Dynamic Island UI features: notifications, media control, battery, customization, and themes. Interactive, responsive design."
+          property="og:description"/>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center w-full py-48 min-px-[16vw] relative">

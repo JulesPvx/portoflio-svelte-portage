@@ -30,9 +30,9 @@
     <meta content="Jules Pouvreaux, Portfolio, Developer, Designer, Web Development, Mobile Development, Full-Stack, Projects, Skills"
           name="keywords"/>
     <meta content="Jules' Portfolio - Full-Stack Developer | Web & Mobile Expert" property="og:title"/>
-    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate full-stack developer and designer."
           name="description"/>
-    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
+    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate full-stack developer and designer."
           property="og:description"/>
     <meta content="https://julespvx.fr/images/preview_1.webp" property="og:image"/>
     <meta content="#3F6836" name="theme-color"/>
@@ -45,8 +45,6 @@
     <meta content="https://julespvx.fr/" property="og:url">
     <meta content="website" property="og:type">
     <meta content="Jules' Portfolio" property="og:title">
-    <meta content="A portfolio showcasing the projects and skills of Jules Pouvreaux, a passionate developer and designer."
-          property="og:description">
     <meta content="https://julespvx.fr/images/preview_1.webp" property="og:image">
 
     <!-- Twitter Meta Tags -->

@@ -35,7 +35,11 @@
 </script>
 
 <svelte:head>
-    <title>Obsidian</title>
+    <title>Obsidian - Secure, Privacy-Focused App Management</title>
+    <meta content="A secure, privacy-focused overview of Obsidian: policy enforcement, data protection, remote management, and development insights."
+          name="description"/>
+    <meta content="A secure, privacy-focused overview of Obsidian: policy enforcement, data protection, remote management, and development insights."
+          property="og:description"/>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center w-full py-48 min-px-[16vw] relative">

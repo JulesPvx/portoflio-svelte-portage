@@ -17,23 +17,33 @@
     } = $props();
 </script>
 
+{#if disabled}
+    <span class="relative link-text">
+        <span class="trigger text">{text}</span>
 
-<a aria-disabled={disabled} class="relative" href={disabled ? undefined : href} target={target}>
-    <span class="trigger">{text}</span>
+        <div class="pointer-events-none absolute-center-overlay inset-0 w-[250px] h-[150px]"
+             style:border-color={borderColor}>
+            {@render children()}
+        </div>
+    </span>
+{:else}
+    <a class="relative" href={href} target={target}>
+        <span class="trigger text">{text}</span>
 
-    <div class="pointer-events-none absolute-center-overlay inset-0 w-[250px] h-[150px]"
-         style:border-color={borderColor}>
-        {@render children()}
-    </div>
-</a>
+        <div class="pointer-events-none absolute-center-overlay inset-0 w-[250px] h-[150px]"
+             style:border-color={borderColor}>
+            {@render children()}
+        </div>
+    </a>
+{/if}
 
 <style>
-    a {
+    .link-text {
         font-family: inherit;
         font-size: inherit;
     }
 
-    span {
+    .text {
         font-family: inherit;
         position: relative;
         color: #3F6836;
@@ -44,7 +54,7 @@
         transition: all 0.3s cubic-bezier(0.175, 1, 0.175, 2);
     }
 
-    span::after {
+    .text::after {
         position: absolute;
         content: '';
         top: -10px;
@@ -53,7 +63,7 @@
         bottom: -10px;
     }
 
-    span:hover {
+    .text:hover {
         font-weight: bold;
     }
 

@@ -33,7 +33,11 @@
 </script>
 
 <svelte:head>
-    <title>AiCh</title>
+    <title>AiCh - AI Project Design Showcase</title>
+    <meta content="A modern AI project showcase featuring design highlights, interactive video, and a clear introduction. Discover AiCh’s features and visual story."
+          name="description"/>
+    <meta content="A modern AI project showcase featuring design highlights, interactive video, and a clear introduction. Discover AiCh’s features and visual story."
+          property="og:description"/>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center w-full py-48 min-px-[16vw] relative">

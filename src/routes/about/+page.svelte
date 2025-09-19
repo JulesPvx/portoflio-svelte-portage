@@ -110,6 +110,11 @@
 
 <svelte:head>
     <title>À propos de Jules Pouvreaux</title>
+
+    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+          name="description"/>
+    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+          property="og:description"/>
 </svelte:head>
 
 <section class="md:pt-96 pt-48 pb-96 relative content w-full">

@@ -33,7 +33,11 @@
 </script>
 
 <svelte:head>
-    <title>Soundtap</title>
+    <title>Soundtap - Skip tracks with your device's volume buttons</title>
+    <meta content="A showcase of Soundtap: exploring the idea, design, and development of an innovative audio project for creative problem solving."
+          name="description"/>
+    <meta content="A showcase of Soundtap: exploring the idea, design, and development of an innovative audio project for creative problem solving."
+          property="og:description"/>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center w-full md:py-48 py-32 min-px-[16vw] relative">
