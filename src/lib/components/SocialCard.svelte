@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {openLink} from "$lib/stores/page.store";
+
     const {
         icon,
         title,
@@ -13,15 +15,32 @@
         href?: string;
     } = $props();
 
+    function handleClick(event: MouseEvent) {
+        event.preventDefault();
+        openLink.set({
+            x: event.clientX,
+            y: event.clientY,
+            url: href,
+            color: color,
+            icon: icon,
+            onContainer: onContainer,
+        })
+    }
+
     const iconHTML = $state(import(`../assets/icons/${icon}.svg?raw`))
 </script>
 
 <a aria-label={title}
-   class="flex flex-row items-center lg:ps-4 lg:py-4 lg:pe-8 ps-2 py-2 pe-2 rounded-full md:pe-4"
+   class="flex flex-row items-center lg:ps-4 lg:py-4 lg:pe-8 ps-2 py-2 pe-2 rounded-full md:pe-4 relative"
    href={href}
+   onclick={handleClick}
    style:--svg-color={onContainer}
    style:background-color={color}
    target="_blank">
+
+    <div class="anim-bg fixed inset-0 z-50 h-screen w-full hidden"
+         style:background-color={color}>
+    </div>
 
     <div class="icon-container lg:h-[56px] lg:w-[56px] h-[48px] w-[48px]">
         {#await iconHTML}
@@ -71,6 +90,9 @@
         color: var(--svg-color) !important;
         max-width: 100%;
         max-height: 100%;
-        object-fit: contain; /* Maintain aspect ratio */
+        object-fit: contain;
+        shape-rendering: geometricPrecision;
+        image-rendering: optimizeQuality;
+        will-change: transform;
     }
 </style>

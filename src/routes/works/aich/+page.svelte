@@ -50,7 +50,7 @@
         </div>
 
         <div class="absolute right-0 mr-8 hidden lg:block" id="video-container">
-            <div class="sticky top-0 mt-[256px] pt-8 w-[21vw]">
+            <div class="sticky top-0 mt-[256px] pt-8 w-[20vw]">
                 <video autoplay class="rounded-3xl" loop muted playsinline>
                     <source src="/images/aich/video.mp4" type="video/mp4"/>
                     {m.video_not_supported()}

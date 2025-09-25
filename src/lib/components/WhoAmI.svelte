@@ -49,9 +49,7 @@
 
         <span class="paragraph mt-4">
             {m.who_am_i_intro_2()}
-
             <br/>
-
             <LinkText disabled text={m.tools_and_frameworks()}>
                 <img alt="my tools and frameworks" class="w-full h-full object-cover" loading='eager'
                      src="/images/frameworks_cover.webp"/>

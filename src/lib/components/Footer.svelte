@@ -3,6 +3,8 @@
     import Star3 from "$lib/components/icons/Star3.svelte";
     import SocialCard from "$lib/components/SocialCard.svelte";
     import {m} from "$paraglide/messages"
+    import {type ColoredLink, openLink} from "$lib/stores/page.store";
+    import {onMount, tick} from "svelte";
 
     const {
         color = $bindable("#3F6836"),
@@ -28,10 +30,71 @@
     const tintedOnContainer = $derived(hslToString(adjustHSL(hsl, 60, 88)))
     const gradientStart = $derived(hslToString(adjustHSL(hsl, 30, 33)))
     const gradientEnd = $derived(hslToString(adjustHSL(hsl, 25, 40)))
+
+    let openedLink = $state<ColoredLink | null>(null);
+
+    onMount(() => {
+        const maxViewportUnit = window.innerHeight > window.innerWidth ? 'vh' : 'vw';
+        console.log('Using max viewport unit:', maxViewportUnit);
+
+        openLink.subscribe(async (value) => {
+            if (value) {
+                openedLink = value;
+
+                await tick();
+
+                const animBg = document.querySelector(`#animated-link-opening`) as HTMLElement;
+
+                animBg.style.left = value.x + 'px';
+                animBg.style.top = value.y + 'px';
+                animBg.style.width = '0px';
+                animBg.style.height = '0px';
+                animBg.style.borderRadius = '75%';
+                animBg.style.transform = 'translate(-50%, -50%) scale(0)';
+                animBg.classList.remove('hidden');
+                animBg.style.transition = 'transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), background-color 1.5s cubic-bezier(0.16, 1, 0.3, 1), left 1s cubic-bezier(0.16, 1, 0.3, 1), top 1s cubic-bezier(0.16, 1, 0.3, 1), border-radius 1.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                animBg.style.backgroundColor = value.color;
+
+                requestAnimationFrame(() => {
+                    animBg.style.transform = `translate(-50%, -50%) scale(1.5)`;
+                    animBg.style.borderRadius = '0%';
+                    animBg.style.width = '100' + maxViewportUnit;
+                    animBg.style.height = '100' + maxViewportUnit;
+                    animBg.style.left = '50%';
+                    animBg.style.top = '50%';
+                    animBg.style.right = '0px';
+                    animBg.style.bottom = '0px';
+                })
+
+                setTimeout(() => {
+                    if (value.url) {
+                        window.open(value.url, '_blank');
+                    }
+                    openedLink = null;
+                }, 750);
+            }
+        })
+    })
 </script>
 
+{#if openedLink !== null}
+    {@const iconHTML = import(`../assets/icons/${openedLink.icon}.svg?raw`)}
+
+    <div class="fixed z-[99999] hidden inset-0" id="animated-link-opening"
+         style:--svg-color={openedLink.onContainer}
+         style:background-color={color}>
+        {#await iconHTML}
+            <div class="loading-placeholder"></div>
+        {:then module}
+            <div class="w-full h-full flex items-center justify-center">
+                {@html module.default}
+            </div>
+        {/await}
+    </div>
+{/if}
+
 <footer
-        class={["w-full flex flex-col items-center overflow-clip", klass]}
+        class={["w-full flex flex-col items-center", klass]}
         id="contact"
         style:--darkHSLString={darkHSLString}
         style:--extraLightHSLString={extraLightHSLString}
@@ -135,6 +198,15 @@
 </footer>
 
 <style>
+    #animated-link-opening :global(svg) {
+        width: 4rem;
+        height: 4rem;
+        color: var(--svg-color) !important;
+        shape-rendering: geometricPrecision;
+        image-rendering: optimizeQuality;
+        will-change: transform;
+    }
+
     #background {
         background: var(--lightHSLString);
     }
