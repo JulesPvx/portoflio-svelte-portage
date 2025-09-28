@@ -24,7 +24,7 @@
             </p>
         </div>
         <ul class="flex-col gap-[24px] flex">
-            {#each projects.slice(0, midpoint) as project}
+            {#each projects.slice(midpoint) as project}
                 <ProjectCard
                         image={project.image}
                         mask={project.mask}
@@ -39,7 +39,7 @@
     </div>
 
     <ul class="w-1/2 flex-col gap-[24px] hidden lg:flex">
-        {#each projects.slice(midpoint) as project}
+        {#each projects.slice(0, midpoint) as project}
             <ProjectCard
                     image={project.image}
                     mask={project.mask}

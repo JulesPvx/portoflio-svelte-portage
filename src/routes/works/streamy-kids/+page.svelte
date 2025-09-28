@@ -5,12 +5,14 @@
     import {m} from "$paraglide/messages.js";
 
     const items = [
-        {href: '#introduction', title: m.introduction()},
-        {href: '#design', title: m.features_and_design()},
+        {href: '#challenge', title: m.streamy_kids_toc_challenge()},
+        {href: '#contribution', title: m.streamy_kids_toc_contribution()},
+        {href: '#solution', title: m.streamy_kids_toc_solution()},
+        {href: '#impact', title: m.streamy_kids_toc_impact()},
     ];
 
     $effect(() => {
-        setPageColor("#8EC8F5")
+        setPageColor("#ebf078")
     })
 
     onMount(() => {
@@ -33,44 +35,62 @@
 </script>
 
 <svelte:head>
-    <title>AiCh - AI Project Design Showcase</title>
-    <meta content="A modern AI project showcase featuring design highlights, interactive video, and a clear introduction. Discover AiCh’s features and visual story."
-          name="description"/>
-    <meta content="A modern AI project showcase featuring design highlights, interactive video, and a clear introduction. Discover AiCh’s features and visual story."
-          property="og:description"/>
+    <title>{m.streamy_kids_page_title()}</title>
+    <meta content={m.streamy_kids_page_description()} name="description"/>
+    <meta content={m.streamy_kids_page_description()} property="og:description"/>
 </svelte:head>
 
 <div class="flex flex-col items-center justify-center w-full py-48 min-px-[16vw] relative">
     <div class="px-8">
-        <img alt={m.aich_image_alt()} class="rounded-3xl w-full" src="/images/aich/cover.webp"/>
+        <img alt={m.streamy_kids_image_alt()} class="rounded-3xl w-full" src="/images/streamy_kids/cover.webp"/>
         <div class="absolute hidden lg:block" id="toc-container">
             <div class="sticky top-0 mt-[256px] pt-8 max-w-0">
                 <TOC class="w-full" items={items}/>
             </div>
         </div>
 
-        <div class="absolute right-0 mr-8 hidden lg:block" id="video-container">
+        <!--<div class="absolute right-0 mr-8 hidden lg:block" id="video-container">
             <div class="sticky top-0 mt-[256px] pt-8 w-[20vw]">
                 <video autoplay class="rounded-3xl" loop muted playsinline>
-                    <source src="/images/aich/video.mp4" type="video/mp4"/>
+                    <source src="/images/streamy_kids/video.mp4" type="video/mp4"/>
                     {m.video_not_supported()}
                 </video>
             </div>
-        </div>
+        </div>-->
     </div>
     <section class="lg:max-w-[50vw] px-8 min-w-[300px] w-full mt-32 flex flex-col items-start justify-start gap-4"
              id="section">
 
-        <section class="scroll-mt-16" id="introduction">
-            <h1>{m.aich_page_title()}</h1>
-            <p>{m.aich_intro_paragraph()}</p>
-            <img alt={m.aich_image_alt()} class="image" src="/images/aich/1.webp"/>
+        <blockquote class="border-l-4 border-yellow-400/70 p-4 pl-6 text-lg font-pecita bg-white/40 rounded-lg">
+            {m.streamy_kids_quote_attribution()}
+        </blockquote>
+
+        <section class="scroll-mt-16" id="challenge">
+            <h1>{m.streamy_kids_toc_challenge()}</h1>
+            <p>{m.streamy_kids_challenge_p1()}</p>
+            <img alt={m.streamy_kids_image_alt()} class="image" src="/images/streamy_kids/1.webp"/>
+            <p>{m.streamy_kids_challenge_p2()}</p>
         </section>
 
-        <section class="scroll-mt-16" id="design">
-            <h1>{m.aich_design_title()}</h1>
-            <p>{m.aich_design_paragraph()}</p>
-            <img alt={m.aich_image_alt()} class="image" src="/images/aich/2.webp"/>
+        <section class="scroll-mt-16" id="contribution">
+            <h1>{m.streamy_kids_toc_contribution()}</h1>
+            <p>{m.streamy_kids_contribution_p1()}</p>
+            <img alt={m.streamy_kids_image_alt()} class="image" src="/images/streamy_kids/2.webp"/>
+            <p>{m.streamy_kids_contribution_p2()}</p>
+        </section>
+
+        <section class="scroll-mt-16" id="solution">
+            <h1>{m.streamy_kids_toc_solution()}</h1>
+            <p>{m.streamy_kids_solution_p1()}</p>
+            <img alt={m.streamy_kids_image_alt()} class="image" src="/images/streamy_kids/3.webp"/>
+            <p>{m.streamy_kids_solution_p2()}</p>
+        </section>
+
+        <section class="scroll-mt-16" id="impact">
+            <h1>{m.streamy_kids_toc_impact()}</h1>
+            <p>{m.streamy_kids_impact_p1()}</p>
+            <img alt={m.streamy_kids_image_alt()} class="image" src="/images/streamy_kids/4.webp"/>
+            <p>{m.streamy_kids_impact_p2()}</p>
         </section>
     </section>
 </div>

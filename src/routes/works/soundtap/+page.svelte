@@ -3,6 +3,7 @@
     import TOC from "$lib/components/TOC.svelte";
     import {onMount} from "svelte";
     import {m} from "$paraglide/messages.js";
+    import PlayStoreButton from "$lib/components/PlayStoreButton.svelte";
 
     const items = [
         {title: m.soundtap_heading_idea(), href: "#the-idea-behind-soundtap"},
@@ -18,10 +19,14 @@
     onMount(() => {
         const section = document.getElementById('section');
         const div = document.getElementById('toc-container');
+        const div2 = document.getElementById('video-container')!;
+
+        if (!section || !div) return;
 
         const setDivHeight = () => {
             const sectionHeight = section.offsetHeight;
             div.style.height = `${sectionHeight}px`;
+            div2.style.height = `${sectionHeight}px`;
         };
 
         try {
@@ -44,8 +49,23 @@
     <div class="px-8">
         <img alt={m.soundtap_image_alt()} class="rounded-3xl w-full" src="/images/soundtap/cover.webp"/>
         <div class="absolute hidden lg:block" id="toc-container">
-            <div class="sticky top-0 mt-[256px] pt-8">
+            <div class="sticky top-0 mt-[256px] pt-8 max-w-0">
                 <TOC items={items}/>
+
+                <PlayStoreButton class="!w-[20vw] mt-6"
+                                 href="https://play.google.com/store/apps/details?id=fr.angel.soundtap"
+                                 icon="/images/soundtap_icon.webp">
+                    Get it on Google Play
+                </PlayStoreButton>
+            </div>
+        </div>
+
+        <div class="absolute right-0 mr-8 hidden lg:block" id="video-container">
+            <div class="sticky top-0 mt-[256px] pt-8 w-[20vw]">
+                <video autoplay class="rounded-3xl" loop muted playsinline>
+                    <source src="/images/soundtap/video.mp4" type="video/mp4"/>
+                    {m.video_not_supported()}
+                </video>
             </div>
         </div>
     </div>
@@ -97,6 +117,7 @@
             </p>
         </section>
     </section>
+
 </div>
 
 <style>

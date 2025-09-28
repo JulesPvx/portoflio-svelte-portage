@@ -35,7 +35,6 @@
 
     onMount(() => {
         const maxViewportUnit = window.innerHeight > window.innerWidth ? 'vh' : 'vw';
-        console.log('Using max viewport unit:', maxViewportUnit);
 
         openLink.subscribe(async (value) => {
             if (value) {

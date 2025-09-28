@@ -34,5 +34,14 @@
     "title": "Dynamic Island",
     "body": "dynamic_island_description",
     "href": "/works/dynamic-island"
+  },
+  {
+    "image": "streamy_kids_icon",
+    "mask": "flower_shape",
+    "color": "#ebf078",
+    "onContainer": "#1d1f02",
+    "title": "Streamy Kids",
+    "body": "streamy_kids_description",
+    "href": "/works/streamy-kids"
   }
 ]

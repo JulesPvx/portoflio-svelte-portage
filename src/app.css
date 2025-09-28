@@ -15,10 +15,16 @@
     src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Pecita';
+    src: url('/fonts/Pecita.otf') format('opentype');
+}
+
 @theme {
     --font-gluten: 'Gluten', cursive;
     --font-satoshi: 'Satoshi', sans-serif;
     --font-notoColorEmoji: 'NotoColorEmoji', sans-serif;
+    --font-pecita: 'Pecita', serif;
 }
 
 html {

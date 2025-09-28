@@ -1,7 +1,6 @@
 <script lang="ts">
     import LinkText from "$lib/components/LinkText.svelte";
     import PrimaryButton from "$lib/components/PrimaryButton.svelte";
-    import SecondaryButton from "$lib/components/SecondaryButton.svelte";
     import TonalButton from "$lib/components/TonalButton.svelte";
     import {localizeHref} from "$paraglide/runtime.js";
     import * as m from "$paraglide/messages";
@@ -97,9 +96,9 @@
                 <enhanced:img alt="alt" class="object-cover size-full" loading='eager'
                               src="/src/lib/assets/images/img.webp"/>
             </div>
-            <SecondaryButton class="absolute bottom-0 translate-y-1/2" href="">
+            <!--<SecondaryButton class="absolute bottom-0 translate-y-1/2" href="">
                 {m.see_more()}
-            </SecondaryButton>
+            </SecondaryButton>-->
         </div>
     </div>
 </div>

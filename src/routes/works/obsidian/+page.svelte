@@ -46,7 +46,7 @@
     <div class="px-8">
         <img alt={m.obsidian_image_alt()} class="rounded-3xl w-full" src="/images/obsidian/cover.webp"/>
         <div class="absolute hidden lg:block" id="toc-container">
-            <div class="sticky top-0 mt-[256px] pt-8">
+            <div class="sticky top-0 mt-[256px] pt-8 max-w-0">
                 <TOC items={items}/>
             </div>
         </div>
