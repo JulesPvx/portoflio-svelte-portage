@@ -59,6 +59,7 @@
 
 <div class="w-full min-h-screen flex flex-col justify-between items-center"
      style:--background-color={backgroundColorString}>
+
     <NavBar bind:color={color}/>
     <main class="w-full">
         {@render children?.()}

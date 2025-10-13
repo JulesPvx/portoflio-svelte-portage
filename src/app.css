@@ -32,6 +32,10 @@ html {
     font-family: var(--font-satoshi), serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Loading state */
 .loading-placeholder {
     width: 100%;
