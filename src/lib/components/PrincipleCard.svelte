@@ -45,7 +45,7 @@
     h2 {
         font-family: Gluten, sans-serif;
         color: #000;
-        font-size: 32px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -53,7 +53,7 @@
 
     p {
         color: rgba(0, 0, 0, 0.80);
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

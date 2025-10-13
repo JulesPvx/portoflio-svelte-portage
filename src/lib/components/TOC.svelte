@@ -76,7 +76,7 @@
     #container a {
         color: #17320A;
         font-family: Satoshi, sans-serif;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;

@@ -23,7 +23,7 @@
         background: #26471d;
         color: #FFF;
         font-family: Gluten, sans-serif;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: normal;
         line-height: normal;

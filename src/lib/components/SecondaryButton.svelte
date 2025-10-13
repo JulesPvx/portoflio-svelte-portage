@@ -25,7 +25,7 @@
         background: #697C61;
         color: #FFF;
         font-family: Gluten, sans-serif;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

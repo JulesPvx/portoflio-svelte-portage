@@ -175,7 +175,7 @@
 
         @media (max-width: 768px) {
             padding: 12px 16px;
-            font-size: 12px;
+            font-size: 0.8rem;
         }
 
         &:hover {
@@ -198,14 +198,14 @@
         color: var(--extraLightHSLString);
         border-radius: 1000px;
         text-align: center;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
         transition: scale 0.3s cubic-bezier(0.175, 1, 0.175, 2), background 0.2s, color 0.2s;
 
         @media (max-width: 768px) {
-            font-size: 12px !important;
+            font-size: 0.8rem !important;
             padding: 10px 16px !important;
         }
     }

@@ -245,7 +245,7 @@
     p {
         color: var(--extraLightHSLString);
         font-family: Gluten, sans-serif;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
@@ -271,7 +271,7 @@
     .link-title {
         color: var(--extraLightHSLString);
         font-family: Gluten, sans-serif;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 900;
         line-height: normal;

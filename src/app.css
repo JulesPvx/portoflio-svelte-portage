@@ -20,16 +20,30 @@
     src: url('/fonts/Pecita.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'OpenDyslexic3';
+    src: url('/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
+}
+
 @theme {
     --font-gluten: 'Gluten', cursive;
     --font-satoshi: 'Satoshi', sans-serif;
     --font-notoColorEmoji: 'NotoColorEmoji', sans-serif;
     --font-pecita: 'Pecita', serif;
+    --font-opendyslexic3: 'OpenDyslexic3', sans-serif;
+}
+
+[data-accessibility-font="true"] * {
+    font-family: OpenDyslexic3, sans-serif !important;
 }
 
 html {
     scroll-behavior: smooth;
     font-family: var(--font-satoshi), serif;
+}
+
+:root {
+    --text-size-multiplier: 1;
 }
 
 body {

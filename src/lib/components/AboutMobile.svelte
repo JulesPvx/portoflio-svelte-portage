@@ -252,13 +252,13 @@
     }
 
     span {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 300;
         line-height: 125%;
     }
 
     p {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 300;
         line-height: 125%;
     }
@@ -267,7 +267,7 @@
         color: #17320A;
         text-align: center;
         font-family: Gluten, sans-serif;
-        font-size: 32px;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 400;
         line-height: 80%;
@@ -276,7 +276,7 @@
     .label {
         color: #17320A;
         font-family: Gluten, sans-serif;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-style: normal;
         font-weight: 400;
     }

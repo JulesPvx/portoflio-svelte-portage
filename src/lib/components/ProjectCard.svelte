@@ -76,15 +76,14 @@
         flex-shrink: 0;
         border-radius: 1000px;
         text-align: center;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-style: normal;
         line-height: normal;
     }
 
     @media (min-width: 768px) {
-
         #button {
-            font-size: 20px;
+            font-size: 1rem;
         }
     }
 
@@ -99,7 +98,7 @@
 
     h2 {
         color: #000;
-        font-size: 36px;
+        font-size: 2.25rem;
         font-style: normal;
         line-height: normal;
     }
@@ -107,7 +106,7 @@
     p {
         color: #000;
         text-align: center;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

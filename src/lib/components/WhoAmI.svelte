@@ -110,7 +110,7 @@
 
 <style>
     .paragraph {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 400;
         line-height: 115%; /* 27.6px */
