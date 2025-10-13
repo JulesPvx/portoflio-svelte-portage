@@ -158,7 +158,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <p>{m.email_me()}</p>
+                            <p class="link-title">{m.email_me()}</p>
                             <span class="mt-2">julespouvreaux@gmail.com</span>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <p>{m.message_me()}</p>
+                            <p class="link-title">{m.message_me()}</p>
                             <span class="mt-2">+33 6 59 506 522</span>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <p>INSTAGRAM</p>
+                            <p class="link-title">INSTAGRAM</p>
                             <span class="mt-2">@julespvx</span>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                     <div class="flex flex-row items-center">
                         <Star3 class="w-[32px] h-[32px]"/>
                         <div class="flex flex-col ms-4">
-                            <p>LINKEDIN</p>
+                            <p class="link-title">LINKEDIN</p>
                             <span class="mt-2">@julespouvreaux</span>
                         </div>
                     </div>
@@ -268,17 +268,7 @@
         line-height: normal;
     }
 
-    h3 {
-        color: #0B1B05;
-        font-family: Gluten, sans-serif;
-        font-size: 2vw;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        text-align: center;
-    }
-
-    h4 {
+    .link-title {
         color: var(--extraLightHSLString);
         font-family: Gluten, sans-serif;
         font-size: 14px;
@@ -288,7 +278,7 @@
     }
 
     @media (min-width: 1024px) {
-        h4 {
+        .link-title {
             font-size: 1.875rem;
             line-height: 2.25rem;
         }
