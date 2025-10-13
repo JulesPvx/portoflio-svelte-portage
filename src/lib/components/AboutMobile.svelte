@@ -1,6 +1,7 @@
 <script lang="ts">
     import {onMount} from "svelte";
     import LinkText from "$lib/components/LinkText.svelte";
+    import * as m from "$paraglide/messages"
 
     onMount(() => {
         const soundPath = "/sounds/honk.mp3";
@@ -74,9 +75,9 @@
 <svelte:head>
     <title>À propos de Jules Pouvreaux</title>
 
-    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+    <meta content={m.about_page_description()}
           name="description"/>
-    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+    <meta content={m.about_page_description()}
           property="og:description"/>
 </svelte:head>
 
@@ -104,45 +105,44 @@
         </svg>
 
         <!-- TITLE - ABOUT ME -->
-        <h1 class="mt-24 mb-12">ABOUT ME</h1>
+        <h1 class="mt-24 mb-12">{m.about_page_title()}</h1>
 
         <!-- TEXT - ABOUT ME -->
         <div class="flex flex-col gap-y-4 mb-24 px-8 bg-white/20 rounded-xl backdrop-blur-sm py-6">
             <span>
-                Hey, I'm Jules, currently studying for a
+                {m.about_1()}
                 <LinkText
                         href="https://iut-angouleme.univ-poitiers.fr/formations/b-u-t-mmi-metiers-du-multimedia-et-de-linternet/"
-                        text="diploma in multimedia and internet">
-                    <img alt="Internet" class="w-full h-full object-cover object-center"
+                        text={m.about_but()}>
+                    <img alt={m.about_internet_alt()} class="w-full h-full object-cover object-center"
                          src="/images/internet.webp"/>
                 </LinkText>
-                at the
-                <LinkText href="https://iut-angouleme.univ-poitiers.fr/" text="IUT in Angoulême">
-                    <img alt="IUT Angouleme" class="w-full h-full object-cover object-center"
+                {m.about_2()}
+                <LinkText href="https://iut-angouleme.univ-poitiers.fr/" text={m.about_iut()}>
+                    <img alt={m.about_iut_alt()} class="w-full h-full object-cover object-center"
                          src="/images/iut.webp"/>
                 </LinkText>
-                , France, I am passionate about development and design.
+                {m.about_3()}
             </span>
             <span>
-                I am a full-stack developer, I love to create websites and applications that are both beautiful
-                and functional. I am also a graphic designer, I love to create logos, posters, and other visuals. I
-                am always looking for new projects to work on, so if you have an idea, feel free to contact me.
+                {m.about_4()}
             </span>
             <span>
-                Always building new projects, I am constantly learning new technologies and improving my skills.
+                {m.about_5()}
             </span>
         </div>
 
         <!-- TITLE - NOW -->
         <span aria-hidden="true" class="pointer-events-none absolute h-[400px]" id="now" style="top: 800px;"></span>
         <div class="flex flex-row gap-8 items-center mb-8">
-            <h1>TODAY</h1>
+            <h1>{m.today().toUpperCase()}</h1>
         </div>
 
         <!-- CARD - BUT -->
         <div class="mb-16 px-8">
             <div class="image w-48 relative mx-auto mb-4">
-                <img alt="Angouleme" class="w-full h-full object-cover object-center" src="/images/angouleme.webp"/>
+                <img alt={m.about_angouleme_alt()} class="w-full h-full object-cover object-center"
+                     src="/images/angouleme.webp"/>
                 <svg class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 me-4 size-12"
                      fill="none" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_88_321)">
@@ -157,8 +157,8 @@
                     </defs>
                 </svg>
             </div>
-            <h4 class="text-center mb-2">Angouleme</h4>
-            <p class="text-center">Studying for a BUT in multimedia and Internet</p>
+            <h4 class="text-center mb-2">{m.about_angouleme_alt()}</h4>
+            <p class="text-center">{m.about_angouleme()}</p>
         </div>
 
         <!-- CARD - FREELANCE -->
@@ -166,30 +166,31 @@
             <div class="image w-48 relative mx-auto mb-4">
                 <img alt="Freelancing" class="w-full h-full object-cover object-top" src="/images/freelance.webp"/>
             </div>
-            <h4 class="text-center mb-2">Freelancing</h4>
-            <p class="text-center">Making progress on my personal projects and working as a freelancer</p>
+            <h4 class="text-center mb-2">{m.about_freelancing()}</h4>
+            <p class="text-center">{m.about_freelancing_desc()}</p>
         </div>
 
         <!-- TITLE - TIMELINE -->
         <span aria-hidden="true" class="pointer-events-none absolute h-[400px]" id="timeline"
               style="top: 1600px;"></span>
         <div class="flex flex-row gap-4 items-center mb-12 mt-16">
-            <h1>TIMELINE</h1>
+            <h1>{m.timeline().toUpperCase()}</h1>
         </div>
 
         <!-- TIMELINE -->
         <div class="flex flex-col gap-16 mb-32 mx-8">
             <div class="text-center">
                 <span class="year">2006</span>
-                <span class="label block mt-2">Born in Angers, France</span>
+                <span class="label block mt-2">{m.about_born()}</span>
             </div>
 
             <div class="text-center">
                 <span class="year">2021</span>
                 <div class="image w-48 relative mx-auto my-4">
-                    <img alt="freelancing" class="w-full h-full object-cover object-top" src="/images/fiverr.webp"/>
+                    <img alt={m.about_freelancing()} class="w-full h-full object-cover object-top"
+                         src="/images/fiverr.webp"/>
                 </div>
-                <p class="text-center">⭐ Started my freelancing carrier on Fiverr and got my first client</p>
+                <p class="text-center">{m.about_started_freelancing()}</p>
             </div>
 
             <div class="text-center">
@@ -197,17 +198,18 @@
             </div>
 
             <div class="text-center">
-                <span class="year">June 2024</span>
+                <span class="year">{m.june()} 2024</span>
                 <div class="image w-48 relative mx-auto my-4">
                     <img alt="baccalaureate" class="w-full h-full object-cover object-top" src="/images/bac.webp"/>
                 </div>
-                <p class="text-center">I passed my STI2D baccalaureate with honors 🎓📜</p>
+                <p class="text-center">{m.about_bac()}</p>
             </div>
 
             <div class="text-center">
-                <span class="year">August 2024</span>
+                <span class="year">{m.august()} 2024</span>
                 <div class="image w-48 relative mx-auto my-4">
-                    <img alt="angouleme" class="w-full h-full object-cover object-top" src="/images/angouleme.webp"/>
+                    <img alt={m.about_angouleme_alt()} class="w-full h-full object-cover object-top"
+                         src="/images/angouleme.webp"/>
                     <svg class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 me-4 size-10"
                          fill="none" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_88_321_2)">
@@ -222,14 +224,14 @@
                         </defs>
                     </svg>
                 </div>
-                <h4 class="text-center mb-2">Angouleme</h4>
-                <p class="text-center">Moving to</p>
+                <h4 class="text-center mb-2">{m.about_angouleme_alt()}</h4>
+                <p class="text-center">{m.moving_to()}</p>
             </div>
         </div>
 
         <!-- TITLE - TO BE CONTINUED -->
         <div class="flex flex-row gap-4 items-center mb-16">
-            <h1>TO BE CONTINUED</h1>
+            <h1>{m.to_be_continued().toUpperCase()}</h1>
         </div>
     </div>
 </section>

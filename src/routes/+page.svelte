@@ -286,9 +286,9 @@
     <WhoAmI/>
 </section>
 <section class="grided w-full bg-[#E8F6E1] flex flex-col px-[10vw] py-32">
-    <h4 class="font-gluten md:text-7xl text-6xl md:mt-11">
+    <h2 class="font-gluten md:text-7xl text-6xl md:mt-11">
         {m.my_principles()}
-    </h4>
+    </h2>
     <ul class="md:gap-16 gap-4 md:mt-32 mt-8">
         <PrincipleCard
                 body={m.design_for_humans_description()}
@@ -314,9 +314,9 @@
     <div class="flex flex-row w-full max-w-full lg:max-w-[50%] items-center md:mt-24 mt-12 gap-8"
          id="principles-tip">
         <Star2 class="w-[56px] h-[56px]"/>
-        <h4 class="font-gluten text-xs">
+        <h3 class="font-gluten text-xs">
             {m.principles_description()}
-        </h4>
+        </h3>
     </div>
 </section>
 <svg class="w-full mt-[-2.5vh]"

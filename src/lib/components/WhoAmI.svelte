@@ -20,9 +20,9 @@
 
 <div class="w-full bg-[#B7DEA4] flex flex-row">
     <div class="md:w-1/2 flex-grow lg:m-32 md:m-16 m-8 md:my-32 my-24 justify-center flex flex-col">
-        <h4 class="font-gluten text-5xl">
+        <h2 class="font-gluten text-5xl">
             {m.who_am_i()}
-        </h4>
+        </h2>
 
         <span class="paragraph mt-12">
             {@html m.who_am_i_intro_1({
@@ -59,14 +59,14 @@
             {m.who_am_i_intro_3()}
 
             <LinkText href="https://github.com/JulesPvx" text="GitHub">
-                <img alt="github" class="w-full h-full object-cover" loading='eager'
+                <img alt="GitHub profile preview" class="w-full h-full object-cover" loading='eager'
                      src="/images/github_cover.webp"/>
             </LinkText>
 
             {m.who_am_i_intro_4()}
 
             <LinkText borderColor="#0F4E30" href="https://fr.fiverr.com/julespvx" text="Fiverr">
-                <img alt="Fiverr" class="w-full h-full object-cover" loading='eager'
+                <img alt="Fiverr freelance profile" class="w-full h-full object-cover" loading='eager'
                      src="/images/fiverr_cover.webp"/>
             </LinkText>
             {m.who_am_i_intro_5()}

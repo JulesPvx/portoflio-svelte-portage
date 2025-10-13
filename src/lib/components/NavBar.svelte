@@ -82,9 +82,33 @@
                 </a></li>
             </ul>
         </nav>
-        <a class="me-4" href="#contact" id="contact-btn">
-            {m.contact().toUpperCase()}
-        </a>
+
+        <div class="flex">
+            <button aria-label={m.download_resume()} class="me-4 cursor-pointer" id="download-cv-btn"
+                    onclick={() => window.open('/CV - POUVREAUX Jules - Développement.pdf', '_blank')}>
+                <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_4418_4825)">
+                        <path d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                              fill="white"
+                              opacity="0.4" style="fill: var(--fillg);"/>
+                        <path d="M15.8002 2.21048C15.3902 1.80048 14.6802 2.08048 14.6802 2.65048V6.14048C14.6802 7.60048 15.9202 8.81048 17.4302 8.81048C18.3802 8.82048 19.7002 8.82048 20.8302 8.82048C21.4002 8.82048 21.7002 8.15048 21.3002 7.75048C19.8602 6.30048 17.2802 3.69048 15.8002 2.21048Z"
+                              fill="white" style="fill: var(--fillg);"/>
+                        <path d="M13.5 13.75H7.5C7.09 13.75 6.75 13.41 6.75 13C6.75 12.59 7.09 12.25 7.5 12.25H13.5C13.91 12.25 14.25 12.59 14.25 13C14.25 13.41 13.91 13.75 13.5 13.75Z"
+                              fill="white" style="fill: var(--fillg);"/>
+                        <path d="M11.5 17.75H7.5C7.09 17.75 6.75 17.41 6.75 17C6.75 16.59 7.09 16.25 7.5 16.25H11.5C11.91 16.25 12.25 16.59 12.25 17C12.25 17.41 11.91 17.75 11.5 17.75Z"
+                              fill="white" style="fill: var(--fillg);"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_4418_4825">
+                            <rect fill="white" height="24" width="24"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </button>
+            <a class="me-4" href="#contact" id="contact-btn">
+                {m.contact().toUpperCase()}
+            </a>
+        </div>
     </div>
 </header>
 
@@ -125,7 +149,7 @@
         }
     }
 
-    #contact-btn {
+    #download-cv-btn, #contact-btn {
         display: flex;
         padding: 12px 24px;
         flex-direction: column;
@@ -147,7 +171,7 @@
         }
     }
 
-    #contact-btn:hover {
+    #download-cv-btn:hover, #contact-btn:hover {
         background: var(--lightHSLString);
         color: var(--darkHSLString);
         scale: 1.1;

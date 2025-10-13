@@ -2,11 +2,12 @@
     import {onMount} from "svelte";
     import LinkText from "$lib/components/LinkText.svelte";
     import TOC from "$lib/components/TOC.svelte";
+    import * as m from "$paraglide/messages"
 
     const items = [
-        {title: "About me in 10 seconds", href: "#about-me"},
-        {title: "Now", href: "#now"},
-        {title: "Timeline", href: "#timeline"},
+        {title: m.about_toc_about(), href: "#about-me"},
+        {title: m.about_toc_now(), href: "#now"},
+        {title: m.about_toc_timeline(), href: "#timeline"},
     ];
 
     onMount(() => {
@@ -111,9 +112,9 @@
 <svelte:head>
     <title>À propos de Jules Pouvreaux</title>
 
-    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+    <meta content={m.about_page_description()}
           name="description"/>
-    <meta content="Jules Pouvreaux: full-stack developer, graphic designer, and multimedia student in Angoulême, France. Explore his projects."
+    <meta content={m.about_page_description()}
           property="og:description"/>
 </svelte:head>
 
@@ -153,35 +154,31 @@
                 <path d="M169.128 16.9769C170.772 17.1824 172.271 16.0162 172.477 14.3722C172.682 12.7281 171.516 11.2288 169.872 11.0232L169.128 16.9769ZM1.01808 23.8147C0.0873415 25.1855 0.444021 27.0512 1.81475 27.9819L24.152 43.1492C25.5227 44.0799 27.3884 43.7233 28.3192 42.3525C29.2499 40.9818 28.8932 39.1161 27.5225 38.1854L7.66717 24.7033L21.1492 4.84798C22.0799 3.47726 21.7233 1.61155 20.3525 0.680813C18.9818 -0.249928 17.1161 0.106751 16.1854 1.47748L1.01808 23.8147ZM169.5 14.0001C169.872 11.0232 169.871 11.0231 169.87 11.023C169.869 11.0229 169.868 11.0227 169.866 11.0225C169.863 11.0222 169.859 11.0217 169.855 11.0211C169.845 11.0199 169.831 11.0182 169.814 11.0161C169.779 11.0119 169.728 11.0058 169.662 10.9981C169.53 10.9826 169.336 10.9605 169.082 10.9327C168.572 10.8771 167.819 10.7991 166.828 10.7072C164.846 10.5235 161.913 10.2846 158.082 10.0599C150.419 9.6105 139.157 9.21796 124.704 9.43788C95.7989 9.87773 54.1244 12.7675 2.93667 22.5534L4.06333 28.4466C54.8756 18.7325 96.2011 15.8723 124.796 15.4372C139.093 15.2196 150.206 15.6084 157.731 16.0496C161.493 16.2702 164.357 16.504 166.274 16.6816C167.232 16.7704 167.953 16.8452 168.431 16.8973C168.67 16.9234 168.848 16.9437 168.964 16.9574C169.023 16.9642 169.065 16.9693 169.093 16.9726C169.106 16.9743 169.116 16.9755 169.122 16.9762C169.125 16.9765 169.127 16.9768 169.128 16.9769C169.128 16.977 169.128 16.977 169.129 16.977C169.128 16.977 169.128 16.9769 169.5 14.0001Z"
                       fill="#17320A"/>
             </svg>
-            <h1>ABOUT ME</h1>
+            <h1>{m.about_page_title()}</h1>
         </div>
 
         <!-- TEXT - ABOUT ME -->
         <div class="absolute w-[35%] right-0 me-[12vw] translate-y-[18vw] flex flex-col gap-y-4 ">
                     <span>
-                        Hey, I'm Jules, currently studying for a
+                         {m.about_1()}
                         <LinkText
                                 href="https://iut-angouleme.univ-poitiers.fr/formations/b-u-t-mmi-metiers-du-multimedia-et-de-linternet/"
-                                text="diploma in multimedia and internet">
-                            <img alt="Internet" class="w-full h-full object-cover object-center"
+                                text={m.about_but()}>
+                            <img alt={m.about_internet_alt()} class="w-full h-full object-cover object-center"
                                  src="/images/internet.webp"/>
                         </LinkText>
-                        at the
-                        <LinkText href="https://iut-angouleme.univ-poitiers.fr/" text="IUT in Angoulême">
-                            <img alt="IUT Angouleme" class="w-full h-full object-cover object-center"
+                        {m.about_2()}
+                        <LinkText href="https://iut-angouleme.univ-poitiers.fr/" text={m.about_iut()}>
+                            <img alt={m.about_iut_alt()} class="w-full h-full object-cover object-center"
                                  src="/images/iut.webp"/>
                         </LinkText>
-                        , France, I am passionate about development and design.
+                        {m.about_3()}
                     </span>
             <span>
-                        I am a full-stack developer, I love to create websites and applications that are both beautiful
-                        and
-                        functional. I am also a graphic designer, I love to create logos, posters, and other visuals. I
-                        am
-                        always looking for new projects to work on, so if you have an idea, feel free to contact me.
+                         {m.about_4()}
                     </span>
             <span>
-                        Always building new projects, I am constantly learning new technologies and improving my skills.
+                    {m.about_5()}
                     </span>
         </div>
 
@@ -190,7 +187,7 @@
               class="pointer-events-none absolute translate-x-[-29vw] translate-y-[38vw] w-full h-[70vw]"
               id="now"></span>
         <div class=" absolute right-0 translate-x-[-29vw] translate-y-[50vw] rotate-[32.3deg] flex flex-row gap-12 items-center">
-            <h1>NOW</h1>
+            <h1>{m.today().toUpperCase()}</h1>
             <svg class="svg rotate-[-40deg]" fill="none"
                  viewBox="0 0 135 111" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.5525 0.814855C3.06943 0.0761648 1.26834 0.679614 0.529656 2.16269C-0.209039 3.64576 0.394405 5.44685 1.87748 6.18554L4.5525 0.814855ZM127.583 110.471C129.224 110.701 130.74 109.558 130.971 107.917L134.726 81.1796C134.956 79.5388 133.813 78.0219 132.172 77.7915C130.531 77.5611 129.014 78.7044 128.784 80.3452L125.446 104.112L101.68 100.775C100.039 100.544 98.5219 101.687 98.2915 103.328C98.0611 104.969 99.2044 106.486 100.845 106.716L127.583 110.471ZM3.21499 3.5002C1.87748 6.18554 1.87717 6.18539 1.87714 6.18537C1.87751 6.18555 1.87777 6.18569 1.8785 6.18604C1.87997 6.18678 1.88257 6.18808 1.88629 6.18994C1.89371 6.19365 1.90563 6.19962 1.92197 6.20784C1.95466 6.22426 2.00509 6.24968 2.07289 6.28406C2.20847 6.35281 2.4135 6.45739 2.68499 6.59761C3.22798 6.87803 4.03674 7.3009 5.08738 7.86452C7.18874 8.9918 10.2571 10.6818 14.1013 12.9207C21.7907 17.3991 32.578 24.0702 44.936 32.8232C69.6712 50.3429 100.604 76.1371 125.604 109.306L130.396 105.694C104.896 71.863 73.4363 45.6572 48.404 27.927C35.8782 19.0551 24.938 12.2887 17.1209 7.73592C13.2118 5.45921 10.0821 3.73513 7.92374 2.57727C6.84451 1.99831 6.00799 1.56084 5.43816 1.26656C5.15324 1.11942 4.93498 1.00805 4.78638 0.932704C4.71208 0.895034 4.65519 0.866356 4.61608 0.8467C4.59653 0.836878 4.58143 0.829311 4.57081 0.824001C4.56551 0.821347 4.56132 0.81925 4.55827 0.817732C4.55674 0.816968 4.5553 0.816248 4.55454 0.815866C4.55339 0.815297 4.5525 0.814855 3.21499 3.5002Z"
@@ -201,7 +198,8 @@
         <!-- CARD - BUT -->
         <div class="absolute right-0 translate-x-[-16vw] translate-y-[64vw]">
             <div class="image w-[16vw] relative">
-                <img alt="Angouleme" class="w-full h-full object-cover object-center" src="/images/angouleme.webp"/>
+                <img alt={m.about_angouleme_alt()} class="w-full h-full object-cover object-center"
+                     src="/images/angouleme.webp"/>
             </div>
             <svg class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 me-4 size-[4vw]"
                  fill="none" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
@@ -216,9 +214,9 @@
                     </clipPath>
                 </defs>
             </svg>
-            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">Angouleme</h4>
+            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">{m.about_angouleme_alt()}</h4>
             <h4 class="absolute top-[50%] -translate-y-1/2 p-2 left-0 -translate-x-[105%] text-right">
-                Studying for a BUT in multimedia and Internet
+                {m.about_angouleme()}
             </h4>
         </div>
 
@@ -227,9 +225,9 @@
             <div class="image w-[16vw] relative">
                 <img alt="Angouleme" class="w-full h-full object-cover object-top" src="/images/freelance.webp"/>
             </div>
-            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">Freelancing</h4>
+            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">{m.about_freelancing()}</h4>
             <h4 class="absolute top-[50%] -translate-y-1/2 p-2 left-0 -translate-x-[105%] text-right">
-                Making progress on my personal projects and working as a freelancer
+                {m.about_freelancing_desc()}
             </h4>
         </div>
 
@@ -243,45 +241,45 @@
                 <path d="M83.7538 5.49096C85.1293 4.56738 85.4957 2.70355 84.5722 1.32799C83.6486 -0.0475587 81.7848 -0.413957 80.4092 0.509629L83.7538 5.49096ZM9.74371 97.9734C10.2811 99.5406 11.9872 100.376 13.5545 99.8382L39.0951 91.0815C40.6624 90.5441 41.4973 88.838 40.9599 87.2707C40.4226 85.7034 38.7164 84.8685 37.1491 85.4058L14.4464 93.1896L6.66265 70.4869C6.12529 68.9196 4.41914 68.0846 2.85184 68.622C1.28455 69.1594 0.449617 70.8655 0.986974 72.4328L9.74371 97.9734ZM82.0815 3.00029C80.4092 0.509629 80.4079 0.510478 80.4065 0.511421C80.4059 0.511854 80.4044 0.512884 80.4031 0.513753C80.4005 0.515496 80.3974 0.517595 80.3937 0.520057C80.3865 0.524982 80.377 0.531366 80.3655 0.539211C80.3425 0.554902 80.3111 0.57646 80.2714 0.603961C80.192 0.658973 80.0795 0.73779 79.935 0.841128C79.646 1.04781 79.2289 1.35257 78.6924 1.76118C77.6195 2.57841 76.0692 3.81095 74.1111 5.50478C70.1946 8.89262 64.6479 14.1249 58.0274 21.569C44.7844 36.4595 27.2569 60.1866 9.8869 95.6817L15.2762 98.319C32.4065 63.3138 49.629 40.0408 62.5108 25.5564C68.9528 18.313 74.3123 13.2641 78.0364 10.0426C79.8986 8.43176 81.3521 7.2776 82.328 6.5343C82.8159 6.16264 83.1845 5.89369 83.425 5.72171C83.5452 5.63572 83.6335 5.57397 83.6887 5.53575C83.7162 5.51664 83.7355 5.50342 83.7464 5.49598C83.7519 5.49226 83.7552 5.49 83.7565 5.48916C83.7571 5.48874 83.7572 5.48868 83.7567 5.48899C83.7565 5.48914 83.7558 5.48963 83.7557 5.48971C83.7548 5.49029 83.7538 5.49096 82.0815 3.00029Z"
                       fill="#17320A"/>
             </svg>
-            <h1>TIMELINE</h1>
+            <h1>{m.timeline().toUpperCase()}</h1>
         </div>
 
         <!-- TIMELINE -->
         <div class="absolute right-0 translate-x-[-33vw] translate-y-[137vw] flex flex-col items-center">
             <span class="year">2006</span>
-            <span class="label">Born in Angers, France</span>
+            <span class="label">{m.about_born()}</span>
         </div>
 
         <span class="absolute right-0 translate-x-[-53vw] translate-y-[147vw] year">2021</span>
 
         <div class="absolute right-0 translate-x-[-45vw] translate-y-[154vw]">
             <div class="image w-[13vw] relative">
-                <img alt="freelancing" class="w-full h-full object-cover object-top" src="/images/fiverr.webp"/>
+                <img alt={m.about_freelancing()} class="w-full h-full object-cover object-top"
+                     src="/images/fiverr.webp"/>
             </div>
             <h4 class="absolute top-[50%] -translate-y-1/2 p-2 translate-x-[105%]">
-                ⭐ Started my freelancing carrier on Fiverr and got my first client
+                {m.about_started_freelancing()}
             </h4>
         </div>
 
         <span class="absolute right-0 translate-x-[-52vw] translate-y-[166vw] year !text-[1.8vw] rotate-[8deg]">2022</span>
         <span class="absolute right-0 translate-x-[-51vw] translate-y-[170vw] year !text-[1.8vw] rotate-[-39deg]">2023 </span>
 
-        <span class="absolute right-0 translate-x-[-28vw] translate-y-[170vw] year">June 2024</span>
+        <span class="absolute right-0 translate-x-[-28vw] translate-y-[170vw] year">{m.june()} 2024</span>
 
         <div class="absolute right-0 translate-x-[-35vw] translate-y-[177vw]">
             <div class="image w-[13vw] relative">
                 <img alt="baccalaureate" class="w-full h-full object-cover object-top" src="/images/bac.webp"/>
             </div>
-            <h4 class="absolute top-[50%] -translate-y-1/2 p-2 translate-x-[105%]">
-                I passed my STI2D baccalaureate with honors 🎓📜
-            </h4>
+            <h4 class="absolute top-[50%] -translate-y-1/2 p-2 translate-x-[105%]">{m.about_bac()}</h4>
         </div>
 
-        <span class="absolute right-0 translate-x-[-42vw] translate-y-[190vw] year">August 2024</span>
+        <span class="absolute right-0 translate-x-[-42vw] translate-y-[190vw] year">{m.august()} 2024</span>
 
         <div class="absolute right-0 translate-x-[-23vw] translate-y-[198vw]">
             <div class="image w-[13vw] relative">
-                <img alt="angouleme" class="w-full h-full object-cover object-top" src="/images/angouleme.webp"/>
+                <img alt={m.about_angouleme_alt()} class="w-full h-full object-cover object-top"
+                     src="/images/angouleme.webp"/>
             </div>
             <svg class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 me-4 size-[3vw]"
                  fill="none" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
@@ -296,10 +294,8 @@
                     </clipPath>
                 </defs>
             </svg>
-            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">Angouleme</h4>
-            <h4 class="absolute top-[50%] -translate-y-1/2 p-2 -translate-x-[105%]">
-                Moving to
-            </h4>
+            <h4 class="absolute bottom-[-48px] p-2 left-1/2 -translate-x-1/2">{m.about_angouleme_alt()}</h4>
+            <h4 class="absolute top-[50%] -translate-y-1/2 p-2 -translate-x-[105%]">{m.moving_to()}</h4>
         </div>
 
         <!-- TITLE - TO BE CONTINUED -->
@@ -309,7 +305,7 @@
                 <path d="M312.869 8.87152C314.454 8.39175 315.351 6.71722 314.871 5.13135C314.392 3.54547 312.717 2.6488 311.131 3.12855L312.869 8.87152ZM1.63135 18.1531C0.335166 19.1851 0.12103 21.0725 1.15306 22.3687L17.9709 43.4911C19.003 44.7873 20.8904 45.0014 22.1865 43.9694C23.4827 42.9374 23.6969 41.05 22.6648 39.7538L7.7156 20.9783L26.4911 6.02905C27.7873 4.99702 28.0014 3.10964 26.9694 1.81346C25.9374 0.517276 24.05 0.30314 22.7538 1.33517L1.63135 18.1531ZM312 6.00003C311.131 3.12855 311.132 3.12843 311.131 3.12845C311.131 3.12864 311.13 3.1288 311.129 3.12917C311.127 3.12991 311.122 3.13121 311.116 3.13305C311.104 3.1367 311.085 3.14253 311.058 3.15046C311.005 3.16632 310.922 3.19061 310.812 3.22298C310.59 3.28773 310.254 3.38481 309.804 3.51135C308.905 3.76445 307.554 4.13542 305.761 4.60147C302.177 5.53359 296.829 6.84599 289.814 8.35627C275.782 11.3769 255.079 15.1888 228.46 18.3332C175.223 24.622 98.3317 28.24 3.8382 17.5191L3.1618 23.4809C98.1683 34.26 175.526 30.628 229.164 24.2918C255.983 21.1237 276.874 17.2794 291.077 14.2219C298.178 12.6931 303.608 11.361 307.271 10.4084C309.103 9.93202 310.493 9.55055 311.43 9.2868C311.899 9.15493 312.254 9.05248 312.494 8.9823C312.614 8.94722 312.705 8.92022 312.768 8.90163C312.799 8.89233 312.823 8.88515 312.84 8.88012C312.848 8.8776 312.855 8.87561 312.86 8.87418C312.862 8.87346 312.864 8.8728 312.865 8.87243C312.867 8.87191 312.869 8.87152 312 6.00003Z"
                       fill="#17320A"/>
             </svg>
-            <h1>TO BE CONTINUED</h1>
+            <h1>{m.to_be_continued().toUpperCase()}</h1>
         </div>
     </div>
 </section>
