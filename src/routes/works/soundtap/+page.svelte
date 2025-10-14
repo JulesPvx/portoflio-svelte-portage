@@ -29,12 +29,36 @@
             div2.style.height = `${sectionHeight}px`;
         };
 
-        try {
-            setDivHeight();
-        } catch {
+        const waitForLoad = () => {
+            // Wait for all images to load
+            const images = section.querySelectorAll('img');
+            const imagePromises = Array.from(images).map(img => {
+                if (img.complete) return Promise.resolve();
+                return new Promise(resolve => {
+                    img.onload = resolve;
+                    img.onerror = resolve; // Resolve even on error to prevent hanging
+                });
+            });
+
+            Promise.all(imagePromises).then(() => {
+                setDivHeight();
+            });
+        };
+
+        if (document.readyState === 'complete') {
+            waitForLoad();
+        } else {
+            window.addEventListener('load', waitForLoad);
         }
+
         window.addEventListener('resize', setDivHeight);
+
+        return () => {
+            window.removeEventListener('resize', setDivHeight);
+            window.removeEventListener('load', waitForLoad);
+        };
     });
+
 </script>
 
 <svelte:head>
