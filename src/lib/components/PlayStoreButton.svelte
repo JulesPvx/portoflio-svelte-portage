@@ -3,13 +3,11 @@
 
     const {
         href,
-        icon,
         children,
         class: klass = '',
         ...rest
     }: {
         href: string;
-        icon: string;
         class?: string;
         children: any;
     } = $props();

@@ -3,9 +3,11 @@
 
     const {
         items,
+        disableHoverEffect = false,
         ...rest
     }: {
         items: { title: string; href: string }[];
+        disableHoverEffect?: boolean;
         [key: string]: any;
     } = $props();
 
@@ -50,7 +52,9 @@
 </script>
 
 <div {...rest}>
-    <div id="container">
+    <div class:hover:scale-[1.02]={!disableHoverEffect}
+         class:hover:shadow-lg={!disableHoverEffect}
+         id="container">
         <ul class="flex flex-col gap-2">
             {#each items as item}
                 <li><a href={item.href}>{item.title}</a></li>
@@ -63,14 +67,9 @@
     #container {
         background: rgba(0, 0, 0, 0.10);
         padding: 32px;
-        min-width: 20vw;
+        min-width: 5vw;
         border-radius: 24px;
         transition: box-shadow 0.2s ease, all 0.3s cubic-bezier(0.175, 1, 0.175, 2);
-    }
-
-    #container:hover {
-        scale: 1.02;
-        box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.05);
     }
 
     #container a {

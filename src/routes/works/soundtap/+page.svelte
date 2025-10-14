@@ -1,9 +1,7 @@
 <script lang="ts">
     import {setPageColor} from "$lib/stores/page.store";
-    import TOC from "$lib/components/TOC.svelte";
-    import {onMount} from "svelte";
     import {m} from "$paraglide/messages.js";
-    import PlayStoreButton from "$lib/components/PlayStoreButton.svelte";
+    import WorkLayout from "$lib/components/WorkLayout.svelte";
 
     const items = [
         {title: m.soundtap_heading_idea(), href: "#the-idea-behind-soundtap"},
@@ -15,50 +13,6 @@
     $effect(() => {
         setPageColor("#DDDBFF")
     })
-
-    onMount(() => {
-        const section = document.getElementById('section');
-        const div = document.getElementById('toc-container');
-        const div2 = document.getElementById('video-container')!;
-
-        if (!section || !div) return;
-
-        const setDivHeight = () => {
-            const sectionHeight = section.offsetHeight;
-            div.style.height = `${sectionHeight}px`;
-            div2.style.height = `${sectionHeight}px`;
-        };
-
-        const waitForLoad = () => {
-            // Wait for all images to load
-            const images = section.querySelectorAll('img');
-            const imagePromises = Array.from(images).map(img => {
-                if (img.complete) return Promise.resolve();
-                return new Promise(resolve => {
-                    img.onload = resolve;
-                    img.onerror = resolve; // Resolve even on error to prevent hanging
-                });
-            });
-
-            Promise.all(imagePromises).then(() => {
-                setDivHeight();
-            });
-        };
-
-        if (document.readyState === 'complete') {
-            waitForLoad();
-        } else {
-            window.addEventListener('load', waitForLoad);
-        }
-
-        window.addEventListener('resize', setDivHeight);
-
-        return () => {
-            window.removeEventListener('resize', setDivHeight);
-            window.removeEventListener('load', waitForLoad);
-        };
-    });
-
 </script>
 
 <svelte:head>
@@ -69,32 +23,14 @@
           property="og:description"/>
 </svelte:head>
 
-<div class="flex flex-col items-center justify-center w-full md:py-48 py-32 min-px-[16vw] relative">
-    <div class="px-8">
-        <img alt={m.soundtap_image_alt()} class="rounded-3xl w-full" src="/images/soundtap/cover.webp"/>
-        <div class="absolute hidden lg:block" id="toc-container">
-            <div class="sticky top-0 mt-[256px] pt-8 max-w-0">
-                <TOC items={items}/>
-
-                <PlayStoreButton class="!w-[20vw] mt-6"
-                                 href="https://play.google.com/store/apps/details?id=fr.angel.soundtap"
-                                 icon="/images/soundtap_icon.webp">
-                    Get it on Google Play
-                </PlayStoreButton>
-            </div>
-        </div>
-
-        <div class="absolute right-0 mr-8 hidden lg:block" id="video-container">
-            <div class="sticky top-0 mt-[256px] pt-8 w-[20vw]">
-                <video autoplay class="rounded-3xl" loop muted playsinline>
-                    <source src="/images/soundtap/video.mp4" type="video/mp4"/>
-                    {m.video_not_supported()}
-                </video>
-            </div>
-        </div>
-    </div>
+<WorkLayout TOCItems={items}
+            coverAlt={m.soundtap_image_alt()}
+            coverHref="/images/soundtap/cover.webp"
+            playStoreHref="https://play.google.com/store/apps/details?id=fr.angel.soundtap"
+            video="/images/soundtap/video.mp4"
+>
     <section
-            class="lg:max-w-[50vw] px-8 min-w-[300px] w-full md:mt-32 mt-4 flex flex-col items-start justify-start gap-4"
+            class="lg:max-w-[50vw] min-w-[300px] w-full flex flex-col items-start justify-start gap-4"
             id="section">
 
         <section class="scroll-mt-16" id="the-idea-behind-soundtap">
@@ -121,7 +57,7 @@
             </p>
         </section>
 
-        <section class="scroll-mt-16" id="the-design">
+        <section id="the-design">
             <h1>{m.soundtap_heading_design()}</h1>
             <p>
                 {m.soundtap_design_p1()}
@@ -131,7 +67,7 @@
                 {m.soundtap_design_p2()}
             </p>
         </section>
-        <section class="scroll-mt-16" id="the-development">
+        <section id="the-development">
             <h1>{m.soundtap_heading_development()}</h1>
             <p>
                 {m.soundtap_development_p1()}
@@ -141,45 +77,4 @@
             </p>
         </section>
     </section>
-
-</div>
-
-<style>
-    h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-top: 4rem;
-        margin-bottom: 0.5rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-        font-weight: 400;
-    }
-
-    .image {
-        border-radius: 1.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    @media (min-width: 768px) {
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-top: 4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-
-        .image {
-            border-radius: 2rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
-</style>
+</WorkLayout>
