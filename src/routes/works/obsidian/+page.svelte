@@ -46,7 +46,6 @@
             coverAlt={m.obsidian_image_alt()}
             coverHref="/images/obsidian/cover.webp"
 >
-
     <section class="scroll-mt-16" id="what-is-obsidian">
         <h1>{m.obsidian_heading_what_is()}</h1>
         <p>{m.obsidian_what_is_p1()}</p>
