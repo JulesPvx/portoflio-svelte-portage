@@ -21,6 +21,11 @@
 }
 
 @font-face {
+    font-family: 'PlaywriteUSModern';
+    src: url('/fonts/PlaywriteUSModern-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'OpenDyslexic3';
     src: url('/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
 }
@@ -30,6 +35,7 @@
     --font-satoshi: 'Satoshi', sans-serif;
     --font-notoColorEmoji: 'NotoColorEmoji', sans-serif;
     --font-pecita: 'Pecita', serif;
+    --font-playwriteUSModern: 'PlaywriteUSModern', sans-serif;
     --font-opendyslexic3: 'OpenDyslexic3', sans-serif;
 }
 

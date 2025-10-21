@@ -44,7 +44,8 @@
             coverAlt={m.streamy_kids_image_alt()}
             coverHref="/images/streamy_kids/cover.webp"
 >
-    <blockquote class="border-l-4 mb-8 border-yellow-400/70 p-4 pl-6 text-lg font-pecita bg-white/40 rounded-lg">
+    <blockquote
+            class="border-l-4 mb-8 border-yellow-400/70 p-4 pl-6 text-lg font-playwriteUSModern bg-white/40 rounded-lg">
         {m.streamy_kids_quote_attribution()}
     </blockquote>
 
