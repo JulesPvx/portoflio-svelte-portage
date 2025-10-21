@@ -158,5 +158,11 @@
   "about_toc_about": "About me in 10 seconds",
   "about_toc_now": "Today",
   "about_toc_timeline": "Timeline",
-  "accessibility": "Accessibility"
+  "accessibility": "Accessibility",
+  "accessibility_settings": "Accessibility settings",
+  "close": "Close",
+  "text_size": "Text Size",
+  "reset_to_default": "Reset to Default",
+  "preview_text": "Preview: The quick brown fox jumps over the lazy dog.",
+  "accessibility_font": "Accessibility Font"
 }

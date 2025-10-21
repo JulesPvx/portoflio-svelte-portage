@@ -156,5 +156,11 @@
   "about_toc_about": "À propos de moi",
   "about_toc_now": "Aujourd'hui",
   "about_toc_timeline": "Chronologie",
-  "accessibility": "Accessibilité"
+  "accessibility": "Accessibilité",
+  "accessibility_settings": "Paramètres d'accessibilité",
+  "close": "Fermer",
+  "text_size": "Taille du texte",
+  "reset_to_default": "Réinitialiser",
+  "preview_text": "Aperçu: Par kirs de zythum jovial, ce qu'un fax du web git !",
+  "accessibility_font": "Police accessible"
 }

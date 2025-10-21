@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {m} from "$paraglide/messages"
+
     const {
         opened = $bindable(false),
         dismiss = () => {}
@@ -172,20 +174,20 @@
          ontouchend={handleTouchEnd}
          role="dialog"
          aria-modal="true"
-         aria-label="Accessibility settings"
+         aria-label={m.accessibility_settings()}
     >
         {#if isMobile}
             <div class="bg-gray-300 w-16 h-1 rounded-full absolute top-4 left-1/2 -translate-x-1/2"></div>
         {:else}
             <button class="bg-gray-100 py-2 w-[20vw] rounded-full absolute top-4 left-1/2 -translate-x-1/2 cursor-pointer hover:bg-gray-200 transition-colors"
             onclick={dismiss} aria-label="Close accessibility settings">
-                CLOSE
+                {m.close().toUpperCase()}
             </button>
         {/if}
 
         <div class="flex flex-col gap-8 max-w-3xl w-full py-16">
             <div class="mt-16">
-                <h2 class="text-xl font-bold mb-4">Text Size</h2>
+                <h2 class="text-xl font-bold mb-4">{m.text_size()}</h2>
 
                 <div class="flex items-center h-10 mb-4">
                     <button
@@ -213,19 +215,19 @@
                             onclick={resetTextSize}
                             class="px-4 py-2 bg-gray-200 rounded ms-4"
                     >
-                        Reset to Default
+                        {m.reset_to_default()}
                     </button>
                 </div>
 
 
                 <p class="mt-4 text-sm text-gray-600">
-                    Preview: The quick brown fox jumps over the lazy dog.
+                    {m.preview_text()}
                 </p>
             </div>
 
             <div>
                 <div class="flex gap-8 items-center">
-                    <h2 class="text-xl font-bold mb-4">Accessibility Font</h2>
+                    <h2 class="text-xl font-bold mb-4">{m.accessibility_font()}</h2>
 
                     <div class="flex items-center h-10 mb-4">
                         <label class="inline-flex items-center cursor-pointer">
@@ -238,7 +240,7 @@
 
 
                 <p class="text-sm text-gray-600 font-opendyslexic3">
-                    Preview: The quick brown fox jumps over the lazy dog.
+                    {m.preview_text()}
                 </p>
             </div>
         </div>
