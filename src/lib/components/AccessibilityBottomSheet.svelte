@@ -226,20 +226,17 @@
             </div>
 
             <div>
-                <div class="flex gap-8 items-center">
-                    <h2 class="text-xl font-bold mb-4">{m.accessibility_font()}</h2>
+                <div class="flex gap-2 items-center">
+                    <h2 class="text-xl font-bold">{m.accessibility_font()}</h2>
 
-                    <div class="flex items-center h-10 mb-4">
-                        <label class="inline-flex items-center cursor-pointer">
-                            <input type="checkbox" class="sr-only peer" bind:checked={accessibilityFont}
-                                   onchange={toggleAccessibilityFont}>
-                            <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 dark:peer-checked:bg-green-600"></div>
-                        </label>
-                    </div>
+                    <label class="relative flex justify-between items-center group p-2 text-xl">
+                        <input onchange={toggleAccessibilityFont} bind:checked={accessibilityFont} type="checkbox" class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" />
+                        <span class="w-16 h-8 flex items-center flex-shrink-0 ml-0 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-8 after:h-6 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6 group-hover:after:translate-x-1 group-hover:bg-green-200"></span>
+                    </label>
                 </div>
 
 
-                <p class="text-sm text-gray-600 font-opendyslexic3">
+                <p class="text-sm text-gray-600 font-opendyslexic3 mt-4">
                     {m.preview_text()}
                 </p>
             </div>
