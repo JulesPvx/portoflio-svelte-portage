@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Portainer Webhook
-        run: curl -X POST https://portainer.julespvx.fr/api/stacks/webhooks/11e4d753-e42c-43b5-8fb1-9bbd8cb1ca73
+        run: curl -X POST https://portainer.julespvx.fr/api/stacks/webhooks/055f7d7f-4b4a-465d-b5c4-faafaa5e00e9
