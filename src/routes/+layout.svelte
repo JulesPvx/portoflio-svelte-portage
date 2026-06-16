@@ -21,6 +21,14 @@
 
 <svelte:head>
     <title>Jules' Portfolio</title>
+
+    <script defer
+            src="https://umami.julespvx.fr/analytics"
+            data-website-id="a6405dbc-c3d4-4dab-bbe2-8f248184980b"
+            data-host-url="/api/umami">
+    </script>
+    <script defer src="https://umami.julespvx.fr/recorder.js" data-website-id="a6405dbc-c3d4-4dab-bbe2-8f248184980b" data-sample-rate="0.15" data-mask-level="moderate" data-max-duration="300000"></script>
+
     <link href={favicon} rel="icon"/>
     <link href="https://julespvx.fr/fr/" hreflang="fr" rel="alternate"/>
     <link href="https://julespvx.fr/en/" hreflang="en" rel="alternate"/>

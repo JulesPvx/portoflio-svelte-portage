@@ -1,0 +1,14 @@
+name: Deploy to Portainer
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Portainer Webhook
+        run: curl -X POST https://portainer.julespvx.fr/api/stacks/webhooks/14ae6aca-7881-42a3-bf0e-54585bd7fe4e

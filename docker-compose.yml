@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+    container_name: jules_portfolio
+    restart: unless-stopped
+    networks:
+      - default
+      - cloudflared-net
+
+networks:
+  default:
+    enable_ipv6: true
+  cloudflared-net:
+    external: true
